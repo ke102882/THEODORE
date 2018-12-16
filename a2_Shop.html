@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta
+	name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+/>
+<title>THEODORE</title>
+<link rel="stylesheet" type="text/css" href="index.css" />
+<link
+	rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+	integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+	crossorigin="anonymous"
+/>
+</head>
+
+<body>
+<input type="checkbox" name="" id="hb_con" />
+
+<header>
+	<label for="hb_con" class="hb"> <span></span> </label>
+	<a href="index.html" class="logo"  >
+	<img src="LOGO3.png" alt="THEODORE" />
+	</a>
+
+	<nav class="meun">
+	<a href="a2_Shop.html" class="op1">植物盆栽 <span></span> </a>
+	<a href="#">種植用具 <span></span> </a>
+	<a href="a4_FQA.html">Q&A <span></span> </a>
+	<a href="a5_article.html">種植交流 <span></span> </a>
+	<a href="#" class="hb_meunshow">會員登入</a>
+	<a href="#" class="hb_meunshow">聯絡客服</a>
+	</nav>
+
+	<a href="javascript:;" class="search"> <img src="Icon/search.png" /> </a>
+	<a href="javascript:;" class="shopcar">
+	<img src="Icon/shopcar.png" />
+</header>
+
+<div class="space"id="go"></div>
+
+<section class="DAcarousel">
+	<div class="DAcarouselDiv ib">
+		<!-- <h3>植物盆栽</h3>
+		<p>找到您所屬的植物</p> -->
+	</div>
+</section>
+<section class="productWrap Shop">
+	<div class="filter">
+	<ul class="col-8">
+		<li class="col-15">綜合</li>
+		<li class="col-15">新品</li>
+		<li class="col-15">熱門</li>
+		<li class="col-15">活動</li>
+		<li class="col-15">
+		價錢
+		<!-- <i class="fas fa-sort-amount-down"></i> -->
+		<!-- <i class="fas fa-sort-amount-up"></i> -->
+		</li>
+	</ul>
+	<div class="list">
+		<div class="list2 col-3"><span></span> <span></span></div>
+		<div class="list2for4 col-3">
+		<span></span> <span></span> <span></span> <span></span>
+		</div>
+	</div>
+	</div>
+
+	<input type="checkbox" id="hb_shop" />
+
+	<!--
+	<div class="product_menu hb_fixed col-12 col-md-3">
+		<label for="hb_shop"><h3>盆栽分類</h3></label>
+		<div class="product_menu_contier">
+			<ul>
+				<li><a href="#">周末限定。植物85折</a></li>
+				<li><a href="#">智慧澆水。限時199</a></li>
+				<li><a href="#">開心一夏。滿額好禮</a></li>
+				<li><a href="#">療育紓壓。LED魚缸</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">波士頓腎蕨</a></li>
+				<li><a href="#">虎尾蘭</a></li>
+				<li><a href="#">虎尾蘭草</a></li>
+				<li><a href="#">福祿桐</a></li>
+				<li><a href="#">蔓綠絨</a></li>
+				<li><a href="#">開運竹</a></li>
+				<li><a href="#">金錢樹</a></li>
+				<li><a href="#">粗肋草</a></li>
+				<li><a href="#">常春藤</a></li>
+				<li><a href="#">綠椒草</a></li>
+			</ul>
+		</div>
+	</div>
+	-->
+
+	<div class="product_menu hb_fixed col-12 col-md-3">
+	<label for="hb_shop" class="hb_shop"> <h3>盆栽分類</h3> </label>
+	<div class="product_menu_contier">
+		<input type="checkbox" class="Shop_search" id="Shop_search" />
+		<label for="Shop_search">
+		<img src="Icon/search.png" alt="" />
+		</label>
+		<input type="text" class="Shop_searchText" />
+		<ul class="product_menu_filter live">
+		<li>
+			<h4><img src="pic/s_icon02.svg" />選擇環境</h4>
+		</li>
+		<li>
+			<input type="checkbox" name="live" id="inside" />
+			<label for="inside">室內</label>
+		</li>
+		<li>
+			<input type="checkbox" name="live" id="outside" />
+			<label for="outside">室外</label>
+		</li>
+		</ul>
+		<ul class="product_menu_filter plant">
+		<li>
+			<h4><i class="fas fa-leaf"></i>選擇植物</h4>
+		</li>
+		<li>
+			<input type="checkbox" name="plant" id="small_plant" />
+			<label for="small_plant">迷你盆栽</label>
+		</li>
+		<li>
+			<input type="checkbox" name="plant" id="tr_plant" />
+			<label for="tr_plant">觀葉植物</label>
+		</li>
+		<li>
+			<input type="checkbox" name="plant" id="fl_plant" />
+			<label for="fl_plant">觀花植物</label>
+		</li>
+		<li>
+			<input type="checkbox" name="plant" id="succulents_plant" />
+			<label for="succulents_plant">多肉植物</label>
+		</li>
+		</ul>
+		<ul class="product_menu_filter price">
+		<li>
+			<h4><i class="fas fa-dollar-sign"></i>價錢範圍</h4>
+		</li>
+		<li><input type="text" />~ <input type="text" /></li>
+		<li>
+			<input type="checkbox" name="price" id="price_min" />
+			<label for="price_min">~500元</label>
+		</li>
+		<li>
+			<input type="checkbox" name="price" id="price_s" />
+			<label for="price_s">501~1000元</label>
+		</li>
+		<li>
+			<input type="checkbox" name="price" id="price_m" />
+			<label for="price_m">1001~2000元</label>
+		</li>
+		<li>
+			<input type="checkbox" name="price" id="price_l" />
+			<label for="price_l">2001~3000元</label>
+		</li>
+		<li>
+			<input type="checkbox" name="price" id="price_xl" />
+			<label for="price_xl">3001元~</label>
+		</li>
+		</ul>
+		<button>篩選</button>
+	</div>
+	</div>
+
+	<div class="ShopitemWrap col-12 col-md-9">
+	<div class="Shop_item_pis col-6 col-md-4">
+		<div class="Shop_item">
+		<div><span>任選兩樣免運費</span></div>
+		<div class="pic">
+			<a href="a3_shopin.html" class="pic_big">
+			<img src="pic/SHOP5.jpg" alt="" />
+			</a>
+			<div class="pic_small">
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			</div>
+		</div>
+		<h4 class="datext">
+			<a href="javascript:;">#易照顧</a> <a href="javascript:;">#喜歡微濕的環境</a>
+			<a href="javascript:;">#淨化力前十名</a>
+		</h4>
+		<h3><a href="javascript:;">萊姆黃金葛</a></h3>
+		<p>$299</p>
+		<div class="icon">
+			<a href="javascript:;" class="love col-6">
+			<i class="far fa-heart"> <span>加入收藏</span> </i>
+			<i class="fas fa-heart"> <span>取消收藏</span> </i>
+			</a>
+			<a href="javascript:;" class="addshopcar col-6">
+			<i class="fas fa-cart-plus"> <span>加入購物車</span> </i>
+			<i class="fas fa-check-circle"> <span>取消加入</span> </i>
+			</a>
+		</div>
+		</div>
+	</div>
+	<div class="Shop_item_pis col-6 col-md-4">
+		<div class="Shop_item">
+		<div><span></span></div>
+		<div class="pic">
+			<a href="a3_shopin.html" class="pic_big">
+			<img src="pic/1_000000000046.jpg" alt="" />
+			</a>
+			<div class="pic_small">
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			</div>
+		</div>
+		<h4 class="datext">
+			<a href="javascript:;">#易照顧</a> <a href="javascript:;">#喜歡微濕的環境</a>
+			<a href="javascript:;">#淨化力前十名</a>
+		</h4>
+		<h3><a href="javascript:;">虎尾蘭草</a></h3>
+		<p>$299</p>
+		<div class="icon">
+			<a href="javascript:;" class="love col-6">
+			<i class="far fa-heart"> <span>加入收藏</span> </i>
+			<i class="fas fa-heart"> <span>取消收藏</span> </i>
+			</a>
+			<a href="javascript:;" class="addshopcar col-6">
+			<i class="fas fa-cart-plus"> <span>加入購物車</span> </i>
+			<i class="fas fa-check-circle"> <span>取消加入</span> </i>
+			</a>
+		</div>
+		</div>
+	</div>
+	<div class="Shop_item_pis col-6 col-md-4">
+		<div class="Shop_item">
+		<div><span></span></div>
+		<div class="pic">
+			<a href="a3_shopin.html" class="pic_big">
+			<img src="pic/asset25.jpeg" alt="" />
+			</a>
+			<div class="pic_small">
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			</div>
+		</div>
+		<h4 class="datext">
+			<a href="javascript:;">#易照顧</a> <a href="javascript:;">#喜歡微濕的環境</a>
+			<a href="javascript:;">#淨化力前十名</a>
+		</h4>
+		<h3><a href="javascript:;">虎尾蘭草</a></h3>
+		<p>$299</p>
+		<div class="icon">
+			<a href="javascript:;" class="love col-6">
+			<i class="far fa-heart"> <span>加入收藏</span> </i>
+			<i class="fas fa-heart"> <span>取消收藏</span> </i>
+			</a>
+			<a href="javascript:;" class="addshopcar col-6">
+			<i class="fas fa-cart-plus"> <span>加入購物車</span> </i>
+			<i class="fas fa-check-circle"> <span>取消加入</span> </i>
+			</a>
+		</div>
+		</div>
+	</div>
+	<div class="Shop_item_pis col-6 col-md-4">
+		<div class="Shop_item">
+		<div><span>任選兩樣免運費</span></div>
+		<div class="pic">
+			<a href="a3_shopin.html" class="pic_big">
+			<img src="pic/1_000000000046.jpg" alt="" />
+			</a>
+			<div class="pic_small">
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			</div>
+		</div>
+		<h4 class="datext">
+			<a href="javascript:;">#易照顧</a> <a href="javascript:;">#喜歡微濕的環境</a>
+			<a href="javascript:;">#淨化力前十名</a>
+		</h4>
+		<h3><a href="javascript:;">虎尾蘭草</a></h3>
+		<p>$299</p>
+		<div class="icon">
+			<a href="javascript:;" class="love col-6">
+			<i class="far fa-heart"> <span>加入收藏</span> </i>
+			<i class="fas fa-heart"> <span>取消收藏</span> </i>
+			</a>
+			<a href="javascript:;" class="addshopcar col-6">
+			<i class="fas fa-cart-plus"> <span>加入購物車</span> </i>
+			<i class="fas fa-check-circle"> <span>取消加入</span> </i>
+			</a>
+		</div>
+		</div>
+	</div>
+	<div class="Shop_item_pis col-6 col-md-4">
+		<div class="Shop_item">
+		<div><span>任選兩樣免運費</span></div>
+		<div class="pic">
+			<a href="a3_shopin.html" class="pic_big">
+			<img src="pic/asset25.jpeg" alt="" />
+			</a>
+			<div class="pic_small">
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			</div>
+		</div>
+		<h4 class="datext">
+			<a href="javascript:;">#易照顧</a> <a href="javascript:;">#喜歡微濕的環境</a>
+			<a href="javascript:;">#淨化力前十名</a>
+		</h4>
+		<h3><a href="javascript:;">虎尾蘭草</a></h3>
+		<p>$299</p>
+		<div class="icon">
+			<a href="javascript:;" class="love col-6">
+			<i class="far fa-heart"> <span>加入收藏</span> </i>
+			<i class="fas fa-heart"> <span>取消收藏</span> </i>
+			</a>
+			<a href="javascript:;" class="addshopcar col-6">
+			<i class="fas fa-cart-plus"> <span>加入購物車</span> </i>
+			<i class="fas fa-check-circle"> <span>取消加入</span> </i>
+			</a>
+		</div>
+		</div>
+	</div>
+	<div class="Shop_item_pis col-6 col-md-4">
+		<div class="Shop_item">
+		<div><span>任選兩樣免運費</span></div>
+		<div class="pic">
+			<a href="a3_shopin.html" class="pic_big">
+			<img src="pic/1_000000000046.jpg" alt="" />
+			</a>
+			<div class="pic_small">
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			</div>
+		</div>
+		<h4 class="datext">
+			<a href="javascript:;">#易照顧</a> <a href="javascript:;">#喜歡微濕的環境</a>
+			<a href="javascript:;">#淨化力前十名</a>
+		</h4>
+		<h3><a href="javascript:;">虎尾蘭草</a></h3>
+		<p>$299</p>
+		<div class="icon">
+			<a href="javascript:;" class="love col-6">
+			<i class="far fa-heart"> <span>加入收藏</span> </i>
+			<i class="fas fa-heart"> <span>取消收藏</span> </i>
+			</a>
+			<a href="javascript:;" class="addshopcar col-6">
+			<i class="fas fa-cart-plus"> <span>加入購物車</span> </i>
+			<i class="fas fa-check-circle"> <span>取消加入</span> </i>
+			</a>
+		</div>
+		</div>
+	</div>
+	<div class="Shop_item_pis col-6 col-md-4">
+		<div class="Shop_item">
+		<div><span>任選兩樣免運費</span></div>
+		<div class="pic">
+			<a href="a3_shopin.html" class="pic_big">
+			<img src="pic/asset25.jpeg" alt="" />
+			</a>
+			<div class="pic_small">
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			</div>
+		</div>
+		<h4 class="datext">
+			<a href="javascript:;">#易照顧</a> <a href="javascript:;">#喜歡微濕的環境</a>
+			<a href="javascript:;">#淨化力前十名</a>
+		</h4>
+		<h3><a href="javascript:;">虎尾蘭草</a></h3>
+		<p>$299</p>
+		<div class="icon">
+			<a href="javascript:;" class="love col-6">
+			<i class="far fa-heart"> <span>加入收藏</span> </i>
+			<i class="fas fa-heart"> <span>取消收藏</span> </i>
+			</a>
+			<a href="javascript:;" class="addshopcar col-6">
+			<i class="fas fa-cart-plus"> <span>加入購物車</span> </i>
+			<i class="fas fa-check-circle"> <span>取消加入</span> </i>
+			</a>
+		</div>
+		</div>
+	</div>
+	<div class="Shop_item_pis col-6 col-md-4">
+		<div class="Shop_item">
+		<div><span>任選兩樣免運費</span></div>
+		<div class="pic">
+			<a href="a3_shopin.html" class="pic_big">
+			<img src="pic/1_000000000046.jpg" alt="" />
+			</a>
+			<div class="pic_small">
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			</div>
+		</div>
+		<h4 class="datext">
+			<a href="javascript:;">#易照顧</a> <a href="javascript:;">#喜歡微濕的環境</a>
+			<a href="javascript:;">#淨化力前十名</a>
+		</h4>
+		<h3><a href="javascript:;">虎尾蘭草</a></h3>
+		<p>$299</p>
+		<div class="icon">
+			<a href="javascript:;" class="love col-6">
+			<i class="far fa-heart"> <span>加入收藏</span> </i>
+			<i class="fas fa-heart"> <span>取消收藏</span> </i>
+			</a>
+			<a href="javascript:;" class="addshopcar col-6">
+			<i class="fas fa-cart-plus"> <span>加入購物車</span> </i>
+			<i class="fas fa-check-circle"> <span>取消加入</span> </i>
+			</a>
+		</div>
+		</div>
+	</div>
+	<div class="Shop_item_pis col-6 col-md-4">
+		<div class="Shop_item">
+		<div><span>任選兩樣免運費</span></div>
+		<div class="pic">
+			<a href="a3_shopin.html" class="pic_big">
+			<img src="pic/1_000000000046.jpg" alt="" />
+			</a>
+			<div class="pic_small">
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			</div>
+		</div>
+		<h4 class="datext">
+			<a href="javascript:;">#易照顧</a> <a href="javascript:;">#喜歡微濕的環境</a>
+			<a href="javascript:;">#淨化力前十名</a>
+		</h4>
+		<h3><a href="javascript:;">虎尾蘭草</a></h3>
+		<p>$299</p>
+		<div class="icon">
+			<a href="javascript:;" class="love col-6">
+			<i class="far fa-heart"> <span>加入收藏</span> </i>
+			<i class="fas fa-heart"> <span>取消收藏</span> </i>
+			</a>
+			<a href="javascript:;" class="addshopcar col-6">
+			<i class="fas fa-cart-plus"> <span>加入購物車</span> </i>
+			<i class="fas fa-check-circle"> <span>取消加入</span> </i>
+			</a>
+		</div>
+		</div>
+	</div>
+	<div class="Shop_item_pis col-6 col-md-4">
+		<div class="Shop_item">
+		<div><span>任選兩樣免運費</span></div>
+		<div class="pic">
+			<a href="a3_shopin.html" class="pic_big">
+			<img src="pic/1_000000000046.jpg" alt="" />
+			</a>
+			<div class="pic_small">
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			</div>
+		</div>
+		<h4 class="datext">
+			<a href="javascript:;">#易照顧</a> <a href="javascript:;">#喜歡微濕的環境</a>
+			<a href="javascript:;">#淨化力前十名</a>
+		</h4>
+		<h3><a href="javascript:;">虎尾蘭草</a></h3>
+		<p>$299</p>
+		<div class="icon">
+			<a href="javascript:;" class="love col-6">
+			<i class="far fa-heart"> <span>加入收藏</span> </i>
+			<i class="fas fa-heart"> <span>取消收藏</span> </i>
+			</a>
+			<a href="javascript:;" class="addshopcar col-6">
+			<i class="fas fa-cart-plus"> <span>加入購物車</span> </i>
+			<i class="fas fa-check-circle"> <span>取消加入</span> </i>
+			</a>
+		</div>
+		</div>
+	</div>
+	<div class="Shop_item_pis col-6 col-md-4">
+		<div class="Shop_item">
+		<div><span>任選兩樣免運費</span></div>
+		<div class="pic">
+			<a href="a3_shopin.html" class="pic_big">
+			<img src="pic/1_000000000046.jpg" alt="" />
+			</a>
+			<div class="pic_small">
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			</div>
+		</div>
+		<h4 class="datext">
+			<a href="javascript:;">#易照顧</a> <a href="javascript:;">#喜歡微濕的環境</a>
+			<a href="javascript:;">#淨化力前十名</a>
+		</h4>
+		<h3><a href="javascript:;">虎尾蘭草</a></h3>
+		<p>$299</p>
+		<div class="icon">
+			<a href="javascript:;" class="love col-6">
+			<i class="far fa-heart"> <span>加入收藏</span> </i>
+			<i class="fas fa-heart"> <span>取消收藏</span> </i>
+			</a>
+			<a href="javascript:;" class="addshopcar col-6">
+			<i class="fas fa-cart-plus"> <span>加入購物車</span> </i>
+			<i class="fas fa-check-circle"> <span>取消加入</span> </i>
+			</a>
+		</div>
+		</div>
+	</div>
+	<div class="Shop_item_pis col-6 col-md-4">
+		<div class="Shop_item">
+		<div><span>任選兩樣免運費</span></div>
+		<div class="pic">
+			<a href="a3_shopin.html" class="pic_big">
+			<img src="pic/1_000000000046.jpg" alt="" />
+			</a>
+			<div class="pic_small">
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			<div class="pic_smallpis">
+				<img src="pic/asset29.jpeg" alt="" />
+			</div>
+			</div>
+		</div>
+		<h4 class="datext">
+			<a href="javascript:;">#易照顧</a> <a href="javascript:;">#喜歡微濕的環境</a>
+			<a href="javascript:;">#淨化力前十名</a>
+		</h4>
+		<h3><a href="javascript:;">虎尾蘭草</a></h3>
+		<p>$299</p>
+		<div class="icon">
+			<a href="javascript:;" class="love col-6">
+			<i class="far fa-heart"> <span>加入收藏</span> </i>
+			<i class="fas fa-heart"> <span>取消收藏</span> </i>
+			</a>
+			<a href="javascript:;" class="addshopcar col-6">
+			<i class="fas fa-cart-plus"> <span>加入購物車</span> </i>
+			<i class="fas fa-check-circle"> <span>取消加入</span> </i>
+			</a>
+		</div>
+		</div>
+	</div>
+	</div>
+	<nav>
+	<ul class="pagination">
+		<li><a href="javascript:;" class="last"></a></li>
+		<li class="item1"><a href="javascript:;">1</a></li>
+		<li class="item"><a href="javascript:;">2</a></li>
+		<li class="item"><a href="javascript:;">3</a></li>
+		<li class="item"><a href="javascript:;">4</a></li>
+		<li class="item"><a href="javascript:;">5</a></li>
+		<li><a href="javascript:;" class="next"></a></li>
+	</ul>
+	</nav>
+</section>
+
+<footer>
+	<a href="#go" class="top">TOP</a>
+	<div class="da_logo"><img src="LOGO.png" /></div>
+	<h1>THEODORE盆栽線上商店</h1>
+	<div class="community">
+	<a href="javascript:;" class="col-3 col-md-2">
+		<img src="pic/FB.png" />
+	</a>
+	<a href="javascript:;" class="col-3 col-md-2">
+		<img src="pic/IG.png" />
+	</a>
+	<a href="javascript:;" class="col-3 col-md-2">
+		<img src="pic/twitter.png" />
+	</a>
+	</div>
+	<ul class="clearfix">
+	<li class="service col-4 col-md-6">
+		<h3>客服中心</h3>
+		<a href="javascript:;">查詢帳號密碼</a> <a href="javascript:;">客服信箱</a>
+		<a href="javascript:;">線上客服</a> <a href="javascript:;">Q&A</a>
+	</li>
+	<li class="MVP col-4 col-md-6">
+		<h3>會員服務</h3>
+		<a href="javascript:;">會員中心</a> <a href="javascript:;">優惠查詢</a>
+		<a href="javascript:;">種植日記</a> <a href="javascript:;">查詢訂貨</a>
+	</li>
+	</ul>
+	<p class="statement">© since 2018 theodore.com.tw All Rights Reserved.</p>
+</footer>
+<!--
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+		var _windowWidth = $(window).width();
+		// if( _windowWidth < 768  ){
+			var navOffSetTop = $('hb_fixed').offset().top;
+			var scrTop = 0;
+			var navHight = $('hb_fixed').height();
+
+			$('.spaceShop').height(navHight);
+
+			$(window).scroll(function(){
+				scrTop = $(window).scrollTop();
+				if (scrTop >= navOffSetTop) {
+					$('hb_fixed').addClass('fixed');
+					// $('.space').show();
+				}else{
+					$('hb_fixed').removeClass('fixed');
+				}
+			})
+
+		// }
+
+
+	})
+
+
+
+	</script>
+-->
+</body>
+</html>

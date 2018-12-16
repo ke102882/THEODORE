@@ -1,0 +1,3094 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+   /* outline: 1px solid #f00; */
+  box-sizing: border-box;
+  font-family: var(--fm);
+  border-radius: 2px;
+}
+html,body{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  position: relative;
+}
+:root {
+  --fm: 小塚ゴシック Pr6N,微軟正黑體;
+  --fwL: 200;
+  --fwM: 400;
+  --colorKey_1: rgb(141, 190, 88);
+  --colorKey_2: rgb(44, 100, 51);
+  --colorAu_1: rgb(101, 97, 109);
+  --colorAu_2: rgb(138, 116, 107);
+  --colorAu_3: rgb(84, 147, 54);
+  --colorAu_4: rgb(190, 220, 199);
+  --colorAu_5: rgb(186, 212, 133);
+  --colorAu_6: rgb(228, 222, 118);
+  --fzh1: 30px;
+  --fzh1-md: 28px;
+  --fzh2: 26px;
+  --fzh2-md: 24px;
+  --fzh3: 24px;
+  --fzh3-md: 22px;
+  --fzh4: 22px;
+  --fzh4-md: 20px;
+  --fzp: 18px;
+  --fzp-md: 16px;
+  --fza: 20px;
+  --fza-md: 18px;
+  --fzmoney: 36px;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+p {
+  font-size: var(--fzp);
+}
+a {
+  text-decoration: none;
+  color: var(--colorAu_1);
+}
+h1,
+h1 a {
+  font-size: var(--fzh1);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+h2,
+h2 a {
+  font-size: var(--fzh2);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+h3,
+h3 a {
+  font-size: var(--fzh3);
+  padding: 20px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+h4,
+h4 a {
+  font-size: var(--fzh4);
+  font-weight: 200;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  box-sizing: border-box;
+}
+.col-1 {
+  width: 8.333333333333333%;
+}
+.col-2 {
+  width: 16.66666666666667%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33333333333333%;
+}
+.col-5 {
+  width: 41.66666666666667%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33333333333333%;
+}
+.col-8 {
+  width: 66.66666666666667%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33333333333333%;
+}
+.col-11 {
+  width: 91.66666666666667%;
+}
+.col-12 {
+  width: 100%;
+}
+.col-13 {
+  width: 15.33333333333333%;
+}
+.col-14 {
+  width: 20.33333333333333%;
+}
+.col-15 {
+  width: 18.66666666666667%;
+}
+header {
+  width: 100%;
+  position: fixed;
+  height: 80px;
+  text-align: right;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 999;
+  box-shadow: 0 1px 5px #aaa9;
+}
+
+header:after {
+  content: "";
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+header a {
+  display: inline-block;
+}
+.logo {
+  height: 100%;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+}
+.logo img {
+  margin: 5% 0;
+  width: auto;
+  height: 90%;
+}
+.meun {
+  padding-top: 25%;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  top: 100vh;
+  transition: top 0s, opacity 0.4s;
+  z-index: 100;
+}
+.meun a {
+  width: 100%;
+  padding: 2.25% 0%;
+  display: block;
+  font-size: 16px;
+  position: relative;
+  color: #fff;
+  letter-spacing: 0.3em;
+  font-weight: 400;
+  border-bottom: 1px solid -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0)
+        0%, rgba(255, 255, 255, 0.5) 5%, rgba(255, 255, 255, 0.9) 100%);
+}
+.meun a:before,
+.meun a:after {
+  content: "";
+  margin: auto;
+  width: 25%;
+  height: 50%;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.5s;
+  transform: scale(0);
+}
+.meun a:before {
+  transform-origin: 100% 100%;
+  border-bottom: 1px solid rgba(141, 190, 88);
+  border-right: 1px solid rgba(141, 190, 88);
+}
+.meun a:after {
+  transform-origin: 0 0;
+  border-top: 1px solid rgba(141, 190, 88);
+  border-left: 1px solid rgba(141, 190, 88);
+}
+.meun a:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+.meun a:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+.search,
+.shopcar {
+  width: 30px;
+  vertical-align: middle;
+}
+.search {
+  margin-right: 10px;
+}
+#hb_con {
+  position: absolute;
+  top: -100px;
+  opacity: 0;
+}
+#hb_con:checked ~ header .meun {
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+  transition: top 0s, opacity 0.4s;
+  background-color: #0009;
+  color: #000;
+}
+.hb {
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  z-index: 999;
+  top: 25px;
+  left: 10px;
+}
+.hb span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: var(--colorKey_2);
+  position: absolute;
+  top: 13px;
+  transition: 0.3s;
+}
+.hb span:after,
+.hb span:before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: var(--colorKey_2);
+  border-radius: 5px;
+  position: absolute;
+  transition: 0.6s;
+  transform: rotate(180deg);
+}
+.hb span:after {
+  top: 8px;
+}
+.hb span:before {
+  bottom: 8px;
+}
+#hb_con:checked ~ header .hb span {
+  width: 0;
+  transition: 0.2s;
+}
+#hb_con:checked ~ header .hb span::before {
+  top: 0;
+  transform: rotate(135deg);
+  transition: 0.4s;
+}
+#hb_con:checked ~ header .hb span::after {
+  top: 0;
+  transform: rotate(225deg);
+  transition: 0.4s;
+}
+/*麵包屑頭*/
+.breadcrumb {
+  padding: 100px 0 20px;
+}
+.breadcrumb li a {
+  font-size: 12px;
+  color: var(--colorAu_3);
+}
+.breadcrumb li {
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
+}
+.breadcrumb li:after,
+.breadcrumb li:before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 2px;
+  position: absolute;
+  right: 0;
+  background-color: var(--colorAu_3);
+}
+.breadcrumb li:after {
+  transform: rotate(-45deg) translateX(50%);
+  top: calc(50% + 7px);
+}
+.breadcrumb li:before {
+  transform: rotate(45deg) translateX(50%);
+  position: absolute;
+  bottom: calc(50% + 7px);
+}
+.breadcrumb li:last-child {
+  text-decoration: underline;
+}
+.breadcrumb li:last-child:before,
+.breadcrumb li:last-child:after {
+  display: none;
+}
+/**貓頭鷹輪播**/
+/*輪播-首頁花器*/
+.IndoorPot .owl-carousel .owl-item {
+  float: none;
+  display: inline-block;
+  vertical-align: bottom;
+  /* margin: auto; */
+}
+.item.pot.col-7.col-md-12{
+  margin: auto;
+}
+.owl-theme .item .pic{
+  margin: auto;
+}
+.owl-carousel.owl-theme {
+  text-align: center;
+}
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next{
+  width: 30px;
+  height: 30px;
+  font-size: 0 !important;
+  background-color: transparent !important;
+  border-left: 6px solid #aaa9;
+  border-top: 6px solid #aaa9;
+  border-radius: 0 !important;
+}
+.owl-carousel .owl-nav .owl-prev{
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 5%;
+  /* bottom: 0; */
+}
+.owl-carousel .owl-nav .owl-next{
+  transform: rotate(135deg);
+  position: absolute;
+  right: 5%;
+  /* bottom: 0; */
+}
+/*輪播-商品細項-其他人也看了:*/
+.similar_product .owl-carousel .item span {
+  font-size: var(--fzp-md);
+}
+.similar_product .owl-nav .owl-prev,
+.similar_product .owl-nav .owl-next {
+  top: 30%;
+}
+/*首頁-首屏Carousel*/
+.carousel {
+  width: 100%;
+  height: 100vh;
+  background-image: url(pic/asset11.jpeg);
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+}
+.imgnone {
+  display: none;
+}
+.da_logo {
+  padding: 16vw 15vw;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 25%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.da_logo img {
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  opacity: 0.9;
+}
+/*首頁-第二屏product三欄產品選單*/
+.ProductSort .product_coniter {
+  position: relative;
+  height: 100vh;
+  margin: auto;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.ProductSort .product_coniter:after,
+.ProductSort .product_coniter h2:after {
+  content: "";
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.product_coniter .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  transition: 0.4s;
+}
+.product_coniter:nth-child(1) {
+  background-image: url(pic/c0c6cbdc6f55ebdb45fa8135f63eb1e56_35820761_180831_0023.jpg);
+}
+.product_coniter:nth-child(2) {
+  background-image: url(pic/asset63.jpeg);
+  background-position: 50%;
+}
+.product_coniter:nth-child(3) {
+  background-image: url(pic/c0c6cbdc6f55ebdb45fa8135f63eb1e56_35820761_180831_0058.jpg);
+}
+.ProductSort .product_coniter h2 {
+  height: 100vh;
+}
+.ProductSort .product_coniter h2 a {
+  font-size: var(--fzh2);
+  font-weight: 400;
+  color: #000;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 16vh 5px;
+  writing-mode: vertical-rl;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  position: relative;
+  transition: 0.4s;
+  box-shadow: 0 0 1px #0009;
+}
+
+.ProductSort .product_coniter h2 a:after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 1px #aaa9;
+  top: -5px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  transition: 0.4s;
+}
+/*首頁-第二屏product三欄產品選單-前往商品頁面*/
+.shopGo {
+  font-size: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+  writing-mode: vertical-rl;
+}
+/*首頁-第三屏ProductIteml*/
+/*首頁-第三屏ProductIteml-中間色塊*/
+.wrap_bg {
+  position: relative;
+}
+.wrap_bg:after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 115%;
+  opacity: 1;
+  position: absolute;
+  top: -300px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -1;
+  background-image: url(pic/bg-dot.png);
+  background-position: top left;
+  background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
+  opacity: 0.3;
+}
+/*首頁-第三屏ProductIteml-系列標題h2*/
+.ProductItemTitle {
+  text-align: center;
+  margin: auto;
+  padding-top: 100px;
+  position: relative;
+}
+.ProductItemTitle:after,
+.ProductItemTitle:before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.ProductItemTitle:before {
+  height: 20px;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+  background-color: transparent;
+}
+/*首頁-第三屏ProductIteml-系列項目*/
+.ProductItem {
+  padding: 0 0 100px;
+  text-align: center;
+  line-height: 60px;
+}
+.ProductItem h3 a {
+  font-size: var(--fzh3);
+}
+.ProductItem .product {
+  line-height: 30px;
+  text-align: left;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+.ProductItem .product a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 1;
+}
+.product_item.text {
+  padding: 20px;
+  position: relative;
+}
+.product_item.text:after {
+  content: "";
+  position: absolute;
+  background-position: top left;
+  background-size: 6px 6px;
+  background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+  top: 20px;
+  left: 0%;
+  z-index: -1;
+}
+.product_item.text:before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 12px;
+  border-right: 2px solid var(--colorAu_2);
+  border-bottom: 1px solid var(--colorAu_2);
+  bottom: 0px;
+  left: 30%;
+  margin: auto;
+  transform-origin: bottom;
+  transform: skewX(70deg);
+}
+.product_item.text span {
+  font-size: 15px;
+  position: absolute;
+  top: 85%;
+  left: 30%;
+}
+/*首頁-第四屏PlantBookTitle植物圖鑑*/
+.PlantBookTitleWrap {
+  margin: 100px 0;
+  position: relative;
+  content: "";
+  display: block;
+  height: 600px;
+  background-image: url(pic/main_004.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+.PlantBookTitleWrap:after {
+  content: "";
+  height: 600px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.PlantBookTitleWrap a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.PlantBookTitleWrap:hover > a {
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: 0.5s;
+}
+.plantbooktitle_border {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  position: relative;
+  box-shadow: 0 0 2px #000;
+}
+.PlantBookTitleWrap:hover > .plantbooktitle_border {
+  border: 1px solid var(--colorKey_2);
+  transition: 0.4s;
+}
+.plantbooktitle {
+  text-align: center;
+  color: var(--colorKey_2);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0 20px;
+  box-shadow: 0 0 1px #0009;
+}
+.PlantBookTitleWrap:hover .plantbooktitle {
+  background-color: transparent;
+  transition: 0.5s;
+}
+.plantbooktitle h2,
+.plantbooktitle p {
+  position: relative;
+  z-index: 1;
+}
+.plantbooktitle .pic {
+  width: 60px;
+  display: inline-block;
+  padding: 20px 0;
+  position: relative;
+}
+.plantbooktitle .pic span {
+  font-size: 12px;
+}
+.plantbooktitle .pic::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+/*首頁-頁尾前addMVP引導加入會員*/
+.addMVP ul {
+  margin: 20px 0;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+}
+.addMVP ul:after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.addMVP li {
+  display: inline-block;
+  padding-left: 10px;
+}
+.addMVP li a,
+.ship p {
+  font-size: 20px;
+}
+.ship h4 {
+  font-size: var(--fzh3);
+  font-weight: 600;
+}
+.ship {
+  padding: 20px;
+}
+.shop_item {
+  margin: 10px;
+}
+.ship {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #f401;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.ship .shop_item {
+  vertical-align: top;
+  padding: 20px;
+  margin: 0 5px;
+  position: relative;
+}
+.ship .shop_item h4 {
+  border: 1px solid #000;
+}
+.ship .shop_item p {
+  padding: 20px;
+}
+/*頁尾-footer*/
+footer {
+  position: relative;
+  background-color: rgba(141, 190, 88, 0.3);
+  padding: 20px 0;
+  text-align: center;
+}
+footer .da_logo {
+  background-color: #fff;
+  position: static;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  text-align: center;
+}
+footer .da_logo:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+footer .da_logo img {
+  position: static;
+  width: 90%;
+}
+
+footer .top {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background-color: var(--colorKey_2);
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -35px;
+  margin: auto;
+}
+footer .top:after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-top: 5px solid #fff;
+  border-left: 5px solid #fff;
+  border-radius: 5px;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 12px;
+  margin: auto;
+}
+footer h1 {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 15px 0 10px;
+}
+.community {
+  width: 100%;
+}
+footer .community a {
+  width: 60px;
+  display: inline-block;
+  padding: 10px;
+}
+footer ul {
+  padding: 20px 0;
+  line-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer ul li a {
+  display: block;
+  font-size: 16px;
+}
+footer ul li h3 {
+  font-weight: 400;
+  position: relative;
+}
+.statement {
+  position: relative;
+  padding-top: 10px;
+}
+.statement:after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 1px;
+  background-color: #aaa9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+/************************************************************************************/
+
+/*植物盆栽SHOP_A2*/
+/*植物盆栽-廣告輪播*/
+.DAcarousel {
+  height: 50vh;
+  background-image: url(pic/asset46.jpeg);
+  background-size: cover;
+  background-position: 60% 50%;
+  text-align: center;
+}
+.DAcarousel:after,
+.DAcarouselFQA:after {
+  content: "";
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.DAcarousel .DAcarouselDiv.ib,
+.DAcarouselFQA .DAcarouselDiv.ib {
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+.DAcarouselFQA {
+  height: 50vh;
+  background-image: url(pic/asset14.jpeg);
+  background-size: cover;
+  background-position: 100% 80%;
+  text-align: center;
+}
+/*植物盆栽-排序*/
+.Shop span {
+  font-size: var(--fzh4);
+}
+.filter {
+  text-align: center;
+  padding: 50px 0;
+}
+.filter ul {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.filter ul li {
+  font-size: 15px;
+  display: inline-block;
+  margin-right: 5px;
+  text-align: center;
+  position: relative;
+}
+.filter ul li i{
+  font-size: 10px;
+}
+.filter ul li:nth-child(1) {
+  border: 2px solid var(--colorKey_2);
+}
+.filter ul li:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+}
+.filter ul li:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+}
+.filter ul li:hover::after,
+.filter ul li:hover::before {
+  width: 100%;
+  height: 100%;
+}
+.filter ul li:hover::after {
+  border-bottom: 2px solid var(--colorKey_2);
+  border-right: 2px solid var(--colorKey_2);
+  transition: height 0.3s, width 0.2s 0.2s;
+}
+.filter ul li:hover::before {
+  border-top: 2px solid var(--colorKey_2);
+  border-left: 2px solid var(--colorKey_2);
+  transition: height 0.3s, width 0.2s 0.2s;
+}
+/*植物盆栽-排序-橫直*/
+.list {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 5px;
+  width: 80px;
+  cursor: pointer;
+}
+.list2 {
+  display: inline-block;
+  vertical-align: middle;
+}
+.list2 span {
+  display: inline-block;
+  padding: 5px;
+  background-color: var(--colorKey_2);
+  margin: 0 5px 5px 0;
+}
+.list2for4 {
+  display: inline-block;
+  vertical-align: middle;
+}
+.list2for4 span {
+  width: 100%;
+  height: 0.5vh;
+  display: inline-block;
+  background-color: var(--colorKey_2);
+  margin-bottom: 5px;
+}
+.list2for4_chage {
+  width: auto;
+  padding: 0.9vh;
+  height: auto;
+}
+/*植物盆栽-篩選器*/
+#hb_shop {
+  position: absolute;
+  left: -100%;
+  opacity: 0;
+}
+/* .hb_fixed.fixed{
+	position: fixed;
+	top: 80px;
+	width: 100%;
+}
+.spaceShop{
+	display: none;
+}
+.fixed + .spaceShop{
+	display: block;
+} */
+/* .product_menu{
+	text-align: center;
+	position: relative;
+} */
+.product_menu {
+  text-align: center;
+  background-color: var(--colorAu_3);
+  color: #fff;
+  position: relative;
+  margin-bottom: 50px;
+}
+.hb_shop h3 {
+  position: relative;
+}
+.hb_shop h3:after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 23.1%;
+  margin: auto;
+  transform: rotate(45deg) translateY(-50%);
+}
+.product_menu_contier {
+  display: none;
+}
+/*
+.product_menu_contier{
+	opacity: 0;
+	position: absolute;
+	background-color: #0009;
+	z-index: 999;
+	height: 100vh;
+	right: 0;
+	left: 0;
+	transition: .4s;
+}
+#hb_shop:checked  ~ .product_menu .product_menu_contier{
+	opacity: 1;
+	transition: .4s;
+}
+#hb_shop:checked  ~ .product_menu  li a{
+	display: block;
+	padding: 10px 0;
+	color: #fff;
+	font-size: 20px;
+} */
+
+/*植物盆栽-瀏覽商品頁*/
+.ShopitemWrap {
+  display: inline-block;
+}
+.Shop_item_pis {
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+  margin-bottom: 50px;
+}
+.Shop_item {
+  text-align: center;
+  position: relative;
+}
+.Shop_item:after,
+.Shop_item:before {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: var(--colorAu_4);
+  position: absolute;
+  border-radius: 2px;
+  bottom: -2.5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: 3s;
+}
+.Shop_item:after {
+  width: 90%;
+}
+.Shop_item:before {
+  width: 50%;
+}
+.Shop_item .pic_small {
+  display: none;
+}
+.Shop_item > div > span {
+  color: #f00;
+  height: 20px;
+  font-size: 15px;
+}
+
+.Shop_item_pis .Shop_item h3 a,
+.Shop_item_pis .Shop_item h3 {
+  padding: 0;
+}
+.datext {
+  padding: 0;
+}
+.datext a {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  font-size: 15px;
+}
+.datext a:hover {
+  top: -1px;
+  font-weight: 300;
+}
+.icon {
+  width: 100%;
+  padding: 10px 0 30px;
+}
+.icon span {
+  display: none;
+}
+.icon i {
+  display: inline-block;
+  padding: 20px;
+  font-size: 16px;
+}
+.icon i:hover {
+  color: var(--colorKey_1);
+}
+.fas.fa-heart {
+  display: none;
+}
+.fas.fa-check-circle {
+  display: none;
+}
+/*下上頁*/
+.Shop nav {
+  padding: 50px 0;
+  text-align: center;
+}
+.Shop .pagination {
+  border-radius: 2px;
+  color: var(--colorKey_2);
+}
+.Shop .pagination li {
+  display: inline-block;
+  vertical-align: middle;
+}
+.Shop .pagination li a {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 15px;
+  font-size: var(--fza);
+}
+.Shop .pagination .last:after,
+.Shop .pagination .next:after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin: auto;
+  border-top: 2px solid var(--colorAu_3);
+  border-right: 2px solid var(--colorAu_3);
+}
+.Shop .pagination .last:after {
+  transform: rotate(225deg);
+}
+.Shop .pagination .next:after {
+  transform: rotate(45deg);
+}
+/************************************************************************************/
+/*植物盆栽_商品細項A3_Shopin*/
+.Shop_product_Item {
+  text-align: center;
+}
+.Shop_product_Item h3 {
+  position: relative;
+}
+.Shop_product_Item h3:after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 1px;
+  background-color: var(--colorAu_3);
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/*植物盆栽_商品細項A3_Shopin-商品頭*/
+/*植物盆栽_商品細項A3_Shopin-商品頭-左側_商品圖*/
+.Shop_product_pic .pic .small {
+  display: inline-block;
+}
+/*植物盆栽_商品細項A3_Shopin-商品頭-右側_商品價位等..*/
+.Shop_product_title {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+}
+/*右側_商品價位-會員75折*/
+.Shop_product_title > p {
+  font-size: var(--fzh3-md);
+  color: #f66;
+  padding: 30px 0;
+  border-top: 1px solid #9e9e9e;
+  border-bottom: 1px solid #9e9e9e;
+}
+.product_item_header h2 {
+  color: var(--colorKey_2);
+  display: inline-block;
+  vertical-align: middle;
+}
+.product_item_header .money {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: var(--fzmoney);
+  color: var(--colorKey_2);
+  line-height: 50px;
+}
+.Shop_product_tag {
+  display: inline-block;
+}
+.Shop_product_tag a {
+  font-size: var(--fza);
+  color: var(--colorAu_2);
+  padding-right: 15px;
+}
+.product_item_header .pis {
+  padding: 20px 0 50px;
+  position: relative;
+}
+.product_item_header .pis .col-9 {
+  display: inline-block;
+}
+.product_item_header .pis label {
+  font-size: var(--fzh4);
+  vertical-align: middle;
+}
+.product_item_header .pis .col-9 button {
+  font-size: var(--fzp);
+  line-height: 38px;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  margin: 0 15px;
+  border: 0px solid;
+  background-color: var(--colorAu_5);
+  color: #000;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.product_item_header .pis .col-9 input {
+  width: 45px;
+  height: 45px;
+  font-size: var(--fzp);
+  vertical-align: middle;
+  border: 1px solid #000;
+  text-align: center;
+}
+.Shop_product_Item_addshopcar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+.Shop_product_Item_addshopcar button {
+  padding: 15px 20px;
+  border: 0px solid;
+  border-radius: 0;
+  border: 1px solid var(--colorKey_1);
+}
+.Shop_product_Item_addshopcar i {
+  font-size: 20px;
+}
+.Shop_product_Item_addshopcar span {
+  font-size: var(--fzp);
+  font-weight: 200;
+  padding: 0 15px;
+}
+.Shop_product_Item_addshopcar .heart span {
+  display: none;
+}
+.Shop_product_Item_addshopcar .heart {
+  background-color: #fff;
+  color: var(--colorKey_1);
+  transition: 0.3s;
+  padding: 15px;
+}
+.Shop_product_Item_addshopcar .addshopcar {
+  background-color: var(--colorKey_1);
+  color: #fff;
+  transition: 0.7s;
+}
+/*植物盆栽_商品細項A3_Shopin-盆栽包含以下單品*/
+.Shop_product_fitting {
+  padding: 20px 20px;
+}
+.addproduct a,
+.addproduct p {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 0 15px;
+}
+.addproduct p span {
+  display: none;
+}
+.daaproduct_text {
+  padding: 20px 0;
+}
+/*植物盆栽_商品細項A3_Shopin-植物介紹*/
+.Shop_product_Item .information {
+  padding: 0 20px;
+}
+/*植物盆栽_商品細項A3_Shopin-植物評估*/
+.Shop_product_Item .assess {
+  position: relative;
+  padding: 50px 0;
+}
+.Shop_product_Item .assess:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  height: 100%;
+  opacity: 0.3;
+  z-index: -1;
+  background-color: var(--colorAu_5);
+}
+.Shop_product_Item .grade {
+  height: 2.5vh;
+  margin: auto;
+  border-radius: 2px;
+  margin-bottom:10px;
+  margin-top: 10px;
+}
+.Shop_product_Item .difficult {
+  background-image: linear-gradient(
+    90deg,
+    var(--colorAu_6) 0%,
+    var(--colorAu_6) 25%,
+    #fff 25%,
+    #fff 50%,
+    #fff,
+    75%,
+    #fff 100%
+  );
+}
+.Shop_product_Item .sunlight {
+  background-image: linear-gradient(
+    90deg,
+    var(--colorAu_6) 0%,
+    var(--colorAu_6) 25%,
+    var(--colorAu_5) 25%,
+    var(--colorAu_5) 50%,
+    #fff 50%,
+    #fff,
+    75%,
+    #fff 100%
+  );
+}
+.assess .picWrap {
+  padding: 20px 0;
+}
+.assess .picWrap .pic {
+  display: inline-block;
+  padding: 20px 0;
+}
+.assess .picWrap .pic img {
+  width: 30%;
+}
+.assess > p > a {
+  font-size: var(--fza-md);
+  color: var(--colorKey_1);
+  text-decoration: underline;
+}
+/*植物盆栽_商品細項A3_Shopin-產品說明及注意事項*/
+.Shop_product_Item .note {
+  position: relative;
+  padding: 50px 20px;
+}
+.Shop_product_Item .note:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1;
+  background-color: var(--colorAu_6);
+}
+.Shop_product_Item .note ul {
+  text-align: left;
+  padding: 20px 0;
+}
+.Shop_product_Item .note h4 {
+  position: relative;
+  text-align: left;
+}
+.Shop_product_Item .note h4:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 50%;
+  background-color: var(--colorAu_3);
+  bottom: 0;
+  left: -10px;
+  top: 0;
+  margin: auto;
+}
+/*植物盆栽_商品細項A3_Shopin-其他人也看了*/
+.similar_product {
+  text-align: center;
+  padding: 50px 0;
+  cursor: pointer;
+}
+.similar_product p {
+  font-size: var(--fzh2);
+}
+/*植物盆栽_商品細項A3_Shopin-植物介紹*/
+.information h2 {
+  position: relative;
+}
+.information h2:after {
+  content: "";
+  display: block;
+  max-width: 50px;
+  width: 10%;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  bottom: 20%;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.information h4 {
+  padding: 20px 0;
+}
+.information p {
+  padding: 20px 0 80px;
+  text-align:justify;
+  letter-spacing: .1em;
+}
+/*植物盆栽_商品細項A3_Shopin-種植4守則*/
+.guider_contier p {
+  background-color: #fff;
+  box-shadow: 0 0 5px #aaa9;
+  padding: 20px;
+}
+.guider_contier h4 {
+  padding: 10px 20px;
+  margin: 20px 0;
+  border: 1px solid #000;
+}
+/*植物盆栽_商品細項A3_Shopin-種植交流*/
+.Shop_product_article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 0;
+}
+.Shop_product_article .text {
+  padding: 0px 20px;
+  letter-spacing: .1em;
+}
+.Shop_product_article h3 {
+  width: 100%;
+  text-align: center;
+  margin-top: 200px;
+  position: relative;
+}
+.Shop_product_article h3:after {
+  content: "";
+  display: block;
+  width: 10%;
+  max-width: 50px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  bottom: 20%;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.Shop_product_article span {
+  font-size: 28px;
+  display: inline-block;
+  padding: 10px 0;
+}
+.Shop_product_article .col-6 {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 50px;
+}
+.Shop_product_article .bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 1;
+  box-shadow: 0 0 5px #aaa9;
+  transition: 0.4s;
+}
+.Shop_product_article .bg:hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 1;
+  box-shadow: 0 3px 10px #aaa9;
+  transition: 0.4s;
+}
+.Shop_product_article .bg:hover ~ .pic img {
+  transform: scale(1.2);
+  transition: 0.4s;
+}
+.Shop_product_article .pic {
+  width: 100%;
+  overflow: hidden;
+}
+.Shop_product_article .text h4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  padding: 5px 0;
+}
+.Shop_product_article .text p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-weight: 200;
+}
+.Shop_product_article .text span {
+  font-size: 12px;
+  color: var(--colorAu_1);
+}
+.Shop_product_article .Goforum {
+  display: inline-block;
+  padding: 15px 20px;
+  font-size: var(--fzh2);
+  border: 1px solid var(--colorKey_2);
+  color: var(--colorKey_2);
+}
+/***********************************************************************************************************/
+/*植栽交流*/
+
+.article_header{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.article_header i{
+  font-size: 28px;
+  vertical-align: middle;
+  color: var(--colorAu_4)
+}
+.article_header input[type="text"]{
+  width: 60%;
+  height: 28px;
+  vertical-align: middle;
+  font-size: 15px;
+  padding: 5px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  -webkit-appearance: none;
+}
+.article_header button[type="submit"]{
+  font-size: 15px;
+  padding: 0 5px;
+  vertical-align: middle;
+  margin-left: 15px;
+  border:0;
+  background-color: var(--colorKey_1);
+  color: #fff;
+}
+.hot_tag{
+  width: 100%;
+  padding: 10px 20px;
+  text-align: left;
+  margin: auto;
+}
+.hot_tag > span{
+  font-size: 12px;
+}
+.tag{
+  display: inline-block;
+}
+.tag span{
+  font-size: 12px;
+  margin: 0 5px;
+  border-radius: 20px;
+  background-color: var(--colorAu_6);
+}
+.article.filter{
+  padding:10px 20px;
+  text-align: left;
+}
+/* .article.filter li{
+  font-size: 15px;
+  margin-right: 15px;
+} */
+.article.filter li:nth-of-type(1){
+  font-size: 15px;
+  margin-right: 15px;
+}
+/*文章*/
+.phone_hide{
+  display: none;
+}
+.padWrap{
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+.articleWrap{
+  padding: 20px;
+}
+article{
+  border: 1px solid #aaa9;
+}
+.article_space{
+  height: 100px;
+}
+.mvp{
+  padding: 15px;
+}
+.mvp .picwrap{
+  text-align: left;
+}
+.mvp .mvpname,
+.rmessenger .rms{
+  margin-left: 15px;
+}
+.picwrap,
+.mvpname,
+.mvp ul,
+.rmessenger_p,
+.v.pic{
+  display: inline-block;
+  vertical-align: middle;
+}
+.rmessenger.ptt .picwrap,
+.rmessenger_p{
+  vertical-align: top;
+}
+.v.pic{
+  border-radius: 50%;
+  overflow: hidden;
+}
+.mvpname a{
+  font-size: 15px;
+}
+.picwrap{
+  text-align: center;
+}
+.mvpname .date{
+  font-size: 12px;
+  padding-top:5px; 
+}
+.mvp li{
+  display: inline-block;
+}
+.mvp li a{
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin-left: 5px;
+  background-color: #000;
+}
+.article_contier{
+  padding: 15px;
+}
+.article_contier p{
+  display: inline-block;
+}
+.article_contier span{
+  line-height: 34px;
+  font-size: 16px;
+  color: #999;
+  display: none;
+  cursor: pointer;
+}
+article button{
+  font-size: 16px;
+  padding: 10px 5px;
+  letter-spacing: .5em;
+  vertical-align: middle;
+  border: 0;
+  position: relative;
+  background-color: transparent;
+}
+article .fa-heart::after,article .fa-comments::after{
+  content: '';
+  width: 100%;
+  height:100%;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+article button i{
+  display: block;
+  font-size: 16px;
+  color: #000;
+}
+.fa-comments span{
+  font-size: 16px;
+  letter-spacing: 0;
+}
+.rmessenger{
+  padding: 20px 15px;
+}
+.rmessenger input[type="text"]{
+  padding: 5px;
+  height: 30px;
+  font-size: 16px;
+  vertical-align: middle;
+  border-radius: 5px;
+  -webkit-appearance: none;
+}
+.rmessenger button{
+  letter-spacing: 0;
+  margin-left: 10px;
+  padding: 2.5px 5px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  background-color: transparent;
+}
+.rmessenger button i{
+  font-size: 16px;
+  color: var(--colorKey_2);
+}
+.rmessenger_p .article_contier{
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background-color: #ddd;
+}
+.rmessenger_p{
+  padding-bottom: 20px;
+}
+.rmes_for_who_contier .rmessenger_p{
+  padding-bottom: 5px;
+}
+.rmes_for_who,
+.rmes_for_who_contier_tag,
+.rmes_for_who_contier,
+.rmes_for_who_contier_btn{
+  float: right;
+}
+.rmessenger .rmes_for_who{
+  border:1px solid var(--colorAu_3);
+  color: var(--colorAu_3);
+}
+.rmessenger_p .ban{
+  color: #666;
+  border: 0;
+}
+.conHight{
+  margin: 9px;
+}
+.rmes_for_who_contier 
+.rmes_for_who_contier_tag{
+  border: 0 solid;
+  color: var(--colorAu_3);
+}
+.rmes_for_who_contier .rmes_for_who_contier_btn{
+  border:1px solid var(--colorAu_3);
+  color: #fff;
+  background-color: var(--colorAu_3);
+}
+/***********************************************************************************************************/
+/*FQA*/
+.card{
+  border: 0;
+  max-width: 1200px;
+  margin: auto;
+}
+.card * {
+  font-size: 16px;
+}
+.FQA_wrap {
+  text-align: center;
+  padding: 20px;
+}
+.FQA {
+  font-size: var(--fzh2-md);
+  background-color: #fff;
+  border: 0px;
+  padding: 15px;
+  position: relative;
+  cursor: pointer;
+  margin: 15px;
+}
+.FQA:after {
+  content: "";
+  width: 30%;
+  height: 1px;
+  background-color: #000;
+  transition: 0.6s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.FQA:hover::after {
+  width: 70%;
+  transition: 0.6s;
+}
+#FQA_teach,
+#FQA_des,
+.FQA_des,
+.FQA_teach ,
+input[name="FQA_teach"],
+input[name="FQA_des"]{
+  display: none;
+}
+.FQA_teach_content,
+.FQA_des_content{
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+  transition:.4s;
+}
+.FQA_teach_content .text,
+.FQA_des_content .text{
+  text-align: left;
+  text-align: justify;
+}
+
+.FQA_teach_content .text span{
+  display: inline-block;
+  font-weight: bold;
+  padding: 10px;
+}
+.FQA_teach_content .teach_focal_point{
+  display: inline-block;
+}
+.FQA_teach_content .teach_focal_point li{
+  list-style: none;
+}
+.FQA_teach_content > h2,
+.FQA_des_content > h2{
+  display: inline;
+  border-radius: 20px;
+  font-size: var(--fzh3-md);
+  background-color: #0f05;
+}
+.FQA_teach_content .col-md-5{
+  float: left;
+}
+.FQA_teach_content .col-md-6{
+  float: left;
+}
+#FQA_teach:checked ~ label[for="FQA_teach"]::after {
+  width: 70%;
+  transition: 0.4s;
+}
+#FQA_teach:checked ~ .FQA_teach {
+  display: block;
+}
+#FQA_des:checked ~ label[for="FQA_des"]::after {
+  width: 70%;
+  transition: 0.4s;
+}
+#FQA_des:checked ~ .FQA_des {
+  display: block;
+}
+
+#FQA_teach1:checked ~ .FQAlist label[for="FQA_teach1"],
+#FQA_teach2:checked ~ .FQAlist label[for="FQA_teach2"],
+#FQA_teach3:checked ~ .FQAlist label[for="FQA_teach3"],
+#FQA_teach4:checked ~ .FQAlist label[for="FQA_teach4"],
+#FQA_teach5:checked ~ .FQAlist label[for="FQA_teach5"],
+#FQA_teach6:checked ~ .FQAlist label[for="FQA_teach6"],
+#FQA_teach7:checked ~ .FQAlist label[for="FQA_teach7"],
+#FQA_teach8:checked ~ .FQAlist label[for="FQA_teach8"],
+#FQA_teach9:checked ~ .FQAlist label[for="FQA_teach9"],
+#FQA_teach10:checked ~ .FQAlist label[for="FQA_teach10"],
+#FQA_teach11:checked ~ .FQAlist label[for="FQA_teach11"],
+#FQA_teach12:checked ~ .FQAlist label[for="FQA_teach12"],
+#FQA_teach13:checked ~ .FQAlist label[for="FQA_teach13"],
+#FQA_teach14:checked ~ .FQAlist label[for="FQA_teach14"],
+#FQA_teach15:checked ~ .FQAlist label[for="FQA_teach15"],
+#FQA_teach16:checked ~ .FQAlist label[for="FQA_teach16"],
+#FQA_des1:checked ~ .FQAlist label[for="FQA_des1"]{
+  background-color: #0f05;
+}
+#FQA_teach1:checked ~ .teach1,
+#FQA_teach2:checked ~ .teach2,
+#FQA_teach3:checked ~ .teach3,
+#FQA_teach4:checked ~ .teach4,
+#FQA_teach5:checked ~ .teach5,
+#FQA_teach6:checked ~ .teach6,
+#FQA_teach7:checked ~ .teach7,
+#FQA_teach8:checked ~ .teach8,
+#FQA_teach9:checked ~ .teach9,
+#FQA_teach10:checked ~ .teach10,
+#FQA_teach11:checked ~ .teach11,
+#FQA_teach12:checked ~ .teach12,
+#FQA_teach13:checked ~ .teach13,
+#FQA_teach14:checked ~ .teach14,
+#FQA_teach15:checked ~ .teach15,
+#FQA_teach16:checked ~ .teach16,
+#FQA_des1:checked ~ .des1{
+  height: auto;
+  position: relative;
+  opacity: 1;
+  transition:.4s;
+}
+
+.FQA_des *,
+.FQA_teach * {
+  font-size: var(--fzp-md);
+  padding: 5px;
+}
+.FQA_des_content {
+  padding: 10px;
+}
+.card-header {
+  position: relative;
+  border-bottom: 1px solid  var(--colorAu_4);
+}
+.card-header .btn:after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  /* transform: rotate(45deg); */
+  background-color: var(--colorKey_1);
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: 0.1s;
+}
+
+.card-header .btn:focus::after {
+  height: 15px;
+  transform: rotate(90deg) skewX(45deg);
+  background-color: transparent;
+  border-bottom: 2px solid var(--colorKey_1);
+  border-right: 2px solid var(--colorKey_1);
+  transition: background-color 0s, transform 0.4s, border-bottom 0.4s,
+    border-right 0.4s;
+}
+
+#collapseFQA_teach1 p {
+  text-align: center;
+}
+.card-body * {
+  font-size:  var(--fzp-md);
+  padding: 0;
+  list-style: none;
+  text-align: justify;
+  letter-spacing: 0.1em;
+}
+
+.card-body {
+  font-size: var(--fzp-md);
+  width: 100%;
+  margin: auto;
+}
+.btn {
+  background-color: #fff;
+}
+.btn:hover {
+  color: var(--colorKey_1);
+  font-weight: 600;
+}
+.btn:focus {
+  color: var(--colorKey_1);
+  font-weight: 600;
+}
+a:hover {
+  text-decoration: none;
+}
+.card-body > ul {
+  display: inline-block;
+}
+.card-body > ul > li {
+  display: inline-block;
+  text-align: center;
+}
+.card-body li ul {
+  display: block;
+  background-color: #fff;
+}
+.card-body > p {
+  margin-bottom: 40px;
+}
+.teach_focal_point_warp h3{
+  font-size: var(--fzh3-md);
+  display: inline-block;
+  width: 50%;
+  box-shadow: 0 1px 0px #aaa;
+  margin: 30px;
+}
+.teach_focal_point{
+  padding: 0;
+}
+.list-inline-item {
+  display: inline-block;
+  background-color: var(--colorAu_5);
+  border: 10px solid var(--colorAu_5);
+  vertical-align: middle;
+  width: calc(100% / 2 - 4px);
+  margin-bottom: 5px;
+  padding: 0;
+}
+
+.list-inline-item:nth-of-type(1){
+  border-radius: 0 20px 0px 20px;
+}
+.list-inline-item:nth-of-type(2){
+  border-radius: 20px 0px 20px 0px;
+}
+.list-inline-item:nth-of-type(3){
+  border-radius: 20px 0px 20px 0px;
+}
+.list-inline-item:nth-of-type(4){
+  border-radius: 0 20px 0px 20px;
+}
+.list-inline-item:nth-of-type(1) ul{
+  border-radius: 0 20px 0px 20px;
+}
+.list-inline-item:nth-of-type(2) ul{
+  border-radius: 20px 0px 20px 0px;
+}
+.list-inline-item:nth-of-type(3) ul{
+  border-radius: 20px 0px 20px 0px;
+}
+.list-inline-item:nth-of-type(4) ul{
+  border-radius: 0 20px 0px 20px;
+}
+.list-inline-item ul{
+  background-color: #fff;
+  padding: 10% 15px 10%;
+}
+
+.list-inline-item ul li{
+  padding: 0;
+}
+.list-inline-item p{
+  font-size: 20px;
+  padding:0 0 10px;
+} 
+
+/************************************************************************************/
+/*min-width  567*/
+@media screen and (min-width: 567px) {
+  .shopGo {
+    display: none;
+  }
+}
+/*min-width  768*/
+/************************************************************************************/
+@media screen and (min-width: 768px) {
+  h1,
+  h1 a {
+    font-size: var(--fzh1-md);
+  }
+  h2,
+  h2 a {
+    font-size: var(--fzh2-md);
+  }
+  h3,
+  h3 a {
+    font-size: var(--fzh3-md);
+  }
+  h4,
+  h4 a {
+    font-size: var(--fzh4-md);
+  }
+  p {
+    font-size: var(--fzp-md);
+  }
+  .col-md-1,
+  .col-md-2,
+  .col-md-3,
+  .col-md-4,
+  .col-md-5,
+  .col-md-6,
+  .col-md-7,
+  .col-md-8,
+  .col-md-9,
+  .col-md-10,
+  .col-md-11,
+  .col-md-12 {
+    box-sizing: border-box;
+  }
+  .col-md-1 {
+    width: 8.333333333333333%;
+  }
+  .col-md-2 {
+    width: 16.66666666666667%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.33333333333333%;
+  }
+  .col-md-5 {
+    width: 41.66666666666667%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.33333333333333%;
+  }
+  .col-md-8 {
+    width: 66.66666666666667%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-10 {
+    width: 83.33333333333333%;
+  }
+  .col-md-11 {
+    width: 91.66666666666667%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+  .productWrap {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 80px;
+  }
+  .productWrap.ProductSort {
+    padding: 150px 0;
+  }
+  .productWrap.ProductSort {
+    width: 100%;
+    max-width: 100%;
+  }
+  header {
+    text-align: center;
+  }
+  .hb {
+    display: none;
+  }
+  .meun {
+    padding: 0;
+    height: auto;
+    position: static;
+    width: 92%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -70px;
+    opacity: 1;
+    transition: top 0s;
+  }
+  .meun a {
+    width: 15%;
+    height: 64px;
+    line-height: 64px;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    color: #000;
+  }
+  .meun a:nth-child(2) {
+    margin-right: 130px;
+  }
+  .meun a:after,
+  .meun a:before{
+    width: 80%;
+    height: 60%;
+    transition: 0.5s;
+  }
+  .search {
+    position: relative;
+    left: -30px;
+  }
+  /*桌機-顯示所在頁面*/
+  header .meun .op1:after {
+    opacity: 1;
+    transition: 0s;
+    transform: scale(1);
+  }
+  header .meun .op1:before {
+    opacity: 1;
+    transition: 0s;
+    transform: scale(1);
+  }
+  .meun .hb_meunshow {
+    display: none;
+  }
+  /*桌機-麵包屑頭*/
+  .breadcrumb {
+    width: 1200px;
+    margin: auto;
+    padding: 150px 0 20px;
+  }
+  /*桌機-首頁&頁尾的LOGO*/
+  /***************************************************************************************************/
+  .da_logo {
+    padding: 5.5vw 5vw;
+    min-width: 130px;
+    min-height: 140px;
+  }
+  .da_logo img {
+    width: 80%;
+  }
+  /*桌機-首頁-第二屏product三欄產品選單*/
+  .productWrap.ProductSort {
+    max-width: 100%;
+  }
+  .ProductSort .product_coniter {
+    float: left;
+  }
+  .shopGo {
+    display: block;
+  }
+  .ProductSort .product_coniter h2 a {
+    font-size: var(--fzh2-md);
+    font-weight: 400;
+  }
+  .ProductSort .product_coniter:hover .bg {
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 0;
+    transition: background-color 0.5s, z-index 0s;
+  }
+  .ProductSort .product_coniter:hover > h2 a {
+    background-color: transparent;
+    transition: 0.5s;
+  }
+  .ProductSort .product_coniter:hover > h2 a:after {
+    border: 1px solid var(--colorKey_2);
+    transition: 0.4s;
+  }
+  .Wrap_bgimg {
+    width: 100%;
+    height: 300px;
+    background-image: url(pic/blur-cacti-cactuses-793012.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  /*************************  *************************/
+  /*桌機-首頁-第三屏ProductIteml*/
+  /*桌機-首頁-第三屏ProductIteml-中間色塊*/
+  .wrap_bg:after {
+    display: none;
+  }
+  /*桌機-首頁-盆栽花器*/
+  .ProductItem.IndoorPot {
+    padding-bottom: 150px;
+  }
+  .IndoorPot .owl-nav,
+  .IndoorPot .owl-theme .owl-dots .owl-dot.active {
+    display: none;
+  }
+  .ProductItem .product {
+    line-height: 30px;
+    padding: 20px;
+    text-align: left;
+  }
+  .product_item.pic {
+    position: relative;
+    left: 20px;
+    top: 10px;
+  }
+  .product:nth-child(even) .product_item.pic {
+    position: relative;
+    left: 65.6%;
+    bottom: 100px;
+  }
+  .ProductItem .product_item {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .ProductItem .product_item.text {
+    border: 1px solid #000;
+  }
+  .product_item.text:after {
+    background-image: url(pic/bg-dot.png);
+    background-color: rgba(141, 190, 88, 0.1);
+    left: 10%;
+    z-index: -1;
+    transition: 0.4s;
+  }
+  .product_item.text span {
+    top: 100%;
+  }
+  .product:nth-child(even) .product_item.text span {
+    left: 50%;
+  }
+  .product_item.text:before {
+    width: 30%;
+    height: 12px;
+    bottom: -30px;
+    left: 30%;
+    transition: 0.4s;
+  }
+  .product_item.text:hover:before {
+    width: 40%;
+    height: 12px;
+    bottom: -30px;
+    animation: GoAndBek 1.2s ease 0;
+  }
+  .product:nth-child(even) .product_item.text:before {
+    left: 50%;
+  }
+  /*桌機-首頁-第四屏PlantBookTitle植物圖鑑*/
+  .PlantBookTitleWrap {
+    height: 450px;
+  }
+  .PlantBookTitleWrap:after {
+    height: 450px;
+  }
+  .PlantBookTitleWrap:hover > a {
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: 0.5s;
+  }
+  .PlantBookTitleWrap:hover .plantbooktitle {
+    background-color: transparent;
+    transition: 0.5s;
+  }
+  .PlantBookTitleWrap:hover > .plantbooktitle_border {
+    border: 1px solid var(--colorKey_2);
+    transition: 0.4s;
+  }
+  .plantbooktitle_border {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    position: relative;
+    box-shadow: 0 0 1px #aaa9;
+  }
+  .plantbooktitle {
+    text-align: center;
+    color: var(--colorKey_2);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0 20px;
+    box-shadow: 0 0 1px #0009;
+  }
+  .plantbooktitle {
+    padding: 60px 20px;
+  }
+  /*addMVP引導加入會員*/
+  .addMVP {
+    max-width: 1200px;
+    margin: auto;
+  }
+  .addMVP ul {
+    display: inline-block;
+  }
+  .addMVP li {
+    display: block;
+    margin: auto;
+  }
+  .addMVP ul:after {
+    width: 20%;
+    transition: 0.4s;
+  }
+  .addMVP ul:hover::after {
+    width: 70%;
+    transition: 0.4s;
+  }
+  .ship {
+    padding: 70px;
+    min-height: 350px;
+    background-color: #f401;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .ship .shop_item {
+    display: inline-block;
+    padding: 0;
+  }
+  .shop_item:hover {
+    position: relative;
+    transition: 0.4s;
+    transform: scale(1.05);
+    z-index: 1;
+    box-shadow: 1px 5px 5px #0009;
+    background-color: #fff;
+  }
+  .Shop_item:hover::after {
+    width: 70%;
+    transition: 0.2s;
+    background-color: var(--colorKey_1);
+  }
+  .shop_item h4 {
+    /* padding: 0; */
+    display: block;
+    padding: 20px 0;
+    background-color: var(--colorAu_2);
+    transition: 0.4s;
+    color: #fff;
+  }  
+  .shop_item:hover h4 {
+    background-color: var(--colorAu_3);
+    box-shadow: 0 1px 1px #000;
+    transform: scale(1.1);
+    font-size: 24px;
+  }
+  .shop_item a {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+  }
+  .shop_item p {
+    padding: 15px;
+  }
+  /*頁尾*/
+  footer ul {
+    max-width: 1200px;
+    margin: auto;
+    align-items: stretch;
+  }
+  footer ul li h3 {
+    width: 100%;
+  }
+  footer ul li a:hover {
+    background-color: var(--colorKey_2);
+    color: #fff;
+    transition: 0.4s;
+  }
+  .service:after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 50%;
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    margin: auto;
+    background-color: #000;
+  }
+  .service,
+  .MVP {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .service a,
+  .MVP a {
+    font-size: var(--fza-md);
+    flex: 1;
+    transition: 0.4s;
+    border-radius: 2px;
+  }
+  /************************************************************************************/
+  /*桌機-植物盆栽SHOP_A2*/
+  /*桌機-植物盆栽-排序*/
+  .Shop span {
+    font-size: var(--fzh4-md);
+  }
+  .list2 span {
+    display: inline-block;
+    padding: 8px;
+    background-color: var(--colorKey_2);
+    margin: 0 5px 5px 0;
+  }
+  /*桌機-植物盆栽-瀏覽商品頁-植物分類*/
+  .product_menu_filter i {
+    padding-right: 5px;
+    font-size: 15px;
+    color: #000;
+  }
+  .product_menu_filter img {
+    padding-right: 5px;
+    width: 30px;
+  }
+  .product_menu_filter.price li input[type="text"] {
+    width: 30%;
+    margin: 10px;
+  }
+  .product_menu_filter.price li {
+    font-size: 16px;
+    list-style: none;
+  }
+  /*桌機-植物盆栽-瀏覽商品頁-植物分類-搜尋*/
+  .product_menu_contier input[type="checkbox"] {
+    display: none;
+  }  
+  .product_menu_contier > input[type="text"] {
+    width: 0%;
+    transition: 0.4s;
+  }
+  .product_menu_contier .Shop_searchText {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .product_menu_contier > input[type="checkbox"]:checked ~ input[type="text"] {
+    width: calc(100% - 35px - 20px);
+    transition: 0.4s;
+  }
+  .product_menu_contier .live label,
+  .product_menu_contier .plant label,
+  .product_menu_contier .price label {
+    position: relative;
+  }
+  .product_menu_contier .live label:after,
+  .product_menu_contier .plant label:after,
+  .product_menu_contier .price label:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--colorKey_1);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0;
+  }
+  .product_menu_contier .live input[type="checkbox"]:hover + label:after,
+  .product_menu_contier .plant input[type="checkbox"]:hover + label:after,
+  .product_menu_contier .price input[type="checkbox"]:hover + label:after {
+    opacity: 1;
+  }
+  .product_menu_contier .live input[type="checkbox"]:checked + label,
+  .product_menu_contier .plant input[type="checkbox"]:checked + label,
+  .product_menu_contier .price input[type="checkbox"]:checked + label {
+    padding-left: 25px;
+    background-color: var(--colorKey_1);
+    color: #fff;
+    transition: 0.4s;
+  }
+  .product_menu_contier .Shop_search + label {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    margin-right: 20px;
+    transition: 0.4s;
+  }
+  /*桌機-植物盆栽-瀏覽商品頁*/
+  .datext a {
+    font-size: var(--fzp-md);
+  }
+  .icon span {
+    display: inline;
+    font-size: 15px;
+  }
+  .product_menu {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    background-color: var(--colorAu_4);
+    padding: 10px;
+    margin: auto;
+  }
+  .product_menu:after {
+    display: none;
+  }
+  .hb_shop h3:after {
+    display: none;
+  }
+  /* .product_menu h3{
+    text-align: center;
+    font-weight: 400;
+    padding-bottom: 30px;
+  } */
+  /* .product_menu_contier{
+    opacity: 1;
+    position: static;
+  }
+  .product_menu_contier li a{
+    font-size: 15px;
+  } */
+  .product_menu_contier {
+    text-align: left;
+    display: block;
+    color: var(--colorAu_1);
+  }
+  .product_menu_contier input[type="text"] {
+    height: 30px;
+    border: 0px solid;
+    font-size: 15px;
+  }
+  .product_menu_contier a {
+    font-size: 20px;
+  }
+  .product_menu_contier h4 {
+    font-weight: 600;
+    color: #000;
+  }   
+  .product_menu_contier input[type="text"] {
+    height: 30px;
+    border: 0px solid;
+    font-size: 15px;
+  } 
+  .product_menu_contier li label {
+    font-size: 22px;
+    display: block;
+    cursor: pointer;
+    transition: 0.4s;
+    padding: 0 15px;
+  }
+  .product_menu_contier button,
+  .Goforum {
+    font-size: var(--fzh2-md);
+    margin: 50px 0;
+    width: 100%;
+    background-color: #fff7;
+    border: 1px solid #0000;
+    box-shadow: 0px 0px 1px #aaa9;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+    position: relative;
+  }
+  .product_menu_contier button:after,
+  .Goforum:after {
+    content: "";
+    font-size: 24px;
+    display: block;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border: 1px solid #fff9;
+    transition: 0.4s;
+    position: absolute;
+    top: 0;
+    left: -6px;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+  .product_menu_contier button:hover .Goforum:hover {
+    font-size: var(--fzh2-md);
+    margin: 50px 0;
+    width: 100%;
+    background-color: #fff9;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #aaa9;
+    transition: 0.4s;
+  }
+  .product_menu_contier button:hover::after,
+  .Goforum:hover::after {
+    border: 1px solid var(--colorKey_2);
+  }
+  .Shop .pagination li a {
+    font-size: var(--fza-md);
+  }
+  /*************************************************************************************/
+/*桌機-植物盆栽_商品細項A3_Shopin*/
+  .Shop_product_title,
+  .Shop_product_pic {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .product_item_header .pis {
+    padding: 20px 0 0px;
+    position: relative;
+  }
+  .Shop_product_pic {
+    position: relative;
+  }
+  .Shop_product_pic .pic.col-md-2 {
+    float: left;
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    align-content: space-between;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+  }
+  .Shop_product_pic .pic.col-md-10 {
+    float: right;
+  }
+  .Shop_product_Item_addshopcar {
+    position: static;
+    padding: 20px 0;
+  }
+  .Shop_product_Item_addshopcar .col-2 {
+    display: block;
+  }
+  .Shop_product_Item_addshopcar button {
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .Shop_product_Item_addshopcar .heart span {
+    display: inline-block;
+    transition: 0.1s;
+  }
+  .Shop_product_Item_addshopcar .heart:hover {
+    /* background-color: ; */
+    border: 1px solid var(--colorKey_2);
+    transition: border 0.4s;
+  }
+  .Shop_product_Item_addshopcar .heart:hover span,
+  .Shop_product_Item_addshopcar .addshopcar:hover span {
+    /*font-size: var(--fzh4);*/
+    font-weight: 600;
+    transition: 0.1s;
+  }
+  .Shop_product_Item_addshopcar .heart:hover i,
+  .Shop_product_Item_addshopcar .addshopcar:hover i {
+    /*font-size: var(--fzh4);*/
+    transform: scale(1.2);
+    transition: transform 0.4s, color 0.4s 0s;
+  }
+  .Shop_product_Item_addshopcar .heart:hover i {
+    color: var(--colorKey_2);
+  }
+  .Shop_product_Item_addshopcar .addshopcar:hover {
+    background-color: var(--colorKey_2);
+    /* border: 1px solid var(--colorKey_2);     */
+    color: #fff;
+    transition: color 0.4s, background-color 0.7s;
+  }
+  .Shop_product_Item_addshopcar i {
+    font-size: 22px;
+    transition: 0.4s;
+  }
+/*桌機-植物盆栽_商品細項A3_Shopin-盆栽包含以下單品*/
+  .addproduct > p {
+    display: block;
+  }
+  .addproduct > p span {
+    font-size: var(--fzp);
+    display: inline;
+  }
+  .daaproduct_text {
+    display: inline-block;
+    margin: 0 15px;
+    text-align: center;
+    position: relative;
+  }
+  .daaproduct_text .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    transition: 0.4s;
+    opacity: 0;
+  }
+  .daaproduct_text p {
+    width: 100%;
+    padding: 15px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    transition: 0.4s;
+  }
+  .daaproduct_text p:after {
+    content: "";
+    display: block;
+    width: 0;
+    border-bottom: 20px solid #0009;
+    border-top: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    position: absolute;
+    top: -40px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    transition: 0.4s;
+  }
+  .daaproduct_text:hover p {
+    background-color: #0009;
+    color: #fff;
+    opacity: 1;
+    transition: 0.4s;
+  }
+  .daaproduct_text a {
+    font-size: var(--fza-md);
+  }
+/*桌機-植物盆栽_商品細項A3_Shopin-植物評估*/
+  .Shop_product_Item .assess {
+    line-height: normal;
+  }
+  .Shop_product_Item .assess:after,
+  .Shop_product_Item .note:after {
+    background-color: transparent;
+  }
+  .Shop_product_Item .assess .grade {
+    background-color: #000;
+    border-radius: 2px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .Shop_product_Item .assess {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+  }
+  .assess p {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 20px;
+  }
+  /*桌機-植物盆栽_商品細項A3_Shopin-產品尺寸*/
+  .Shop_product_Item .note {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+  }  
+  .Shop_product_Item h3:after {
+    width: 60%;
+    height: 1px;
+    bottom: 20%;
+    left: 0;
+    right: auto;
+    margin: auto;
+  }  
+  .Shop_product_Item .note h4 {
+    font-weight: 400;
+  } 
+  .Shop_product_Item .note h4:after {
+    width: 5px;
+    height: 5px;
+  }
+  .Shop_product_Item .note ul {
+    padding: 0 0 15px;
+  }
+  .Shop_product_Item .note li p {
+    font-weight: 200;
+  }
+  /*桌機-植物盆栽_商品細項A3_Shopin-其他人也看了*/
+  .Shop_product_Item.similar_product {
+    width: 100%;
+    max-width: 1200px;
+    text-align: left;
+    margin: auto;
+  }
+  .owl-carousel .owl-nav .owl-prev,
+  .owl-carousel .owl-nav .owl-next{
+    height: 20px !important;
+    width:  20px !important;
+    padding: 0px !important;
+    font-size: 0 !important;
+    background-color: transparent !important;
+    border-left: 6px solid #0009;
+    border-top: 6px solid #0009;
+    border-radius: 0 !important;
+  }
+  .owl-carousel .owl-nav .owl-prev{
+    transform: rotate(-45deg);
+    position: absolute;
+    top: auto;
+    left: 30%;
+    bottom: 0;
+  }
+  .owl-carousel .owl-nav .owl-next{
+    transform: rotate(135deg);
+    position: absolute;
+    top: auto;
+    right: 30%;
+    bottom: 0;
+  }
+/*桌機-植物盆栽_商品細項A3_Shopin-植物介紹*/
+  .information {
+    letter-spacing: 2.5px;
+  }  
+  .information .col-md-6 {
+    display: inline-block;
+    padding: 30px 0;
+  }
+  /*桌機-植物盆栽_商品細項A3_Shopin-種植4守則*/
+  .information .guideitem {
+    position: relative;
+  }
+  .information .guideitem .pic,
+  .guider_contier {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .information .guideitem .pic {
+    position: relative;
+    top: 40px;
+    left: 30px;
+    opacity: 0.7;
+    z-index: -1;
+  }
+  /*桌機-植物盆栽_商品細項A3_Shopin-種植交流*/
+  .Shop_product_article .Goforum {
+    font-size: var(--fzh2-md);
+  }
+
+  /*桌機-種植交流*/
+  .phone_hide{
+    display: block;
+  }
+  .card * {
+    font-size: 16px;
+  }
+  .FQA_wrap {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+  }
+  .FQA {
+    font-size:var(--fzh1-md);
+    background-color: #fff;
+    border: 0px;
+    padding: 15px 20px;
+    position: relative;
+    cursor: pointer;
+    margin: 15px;
+  }
+  .FQA:after {
+    content: "";
+    width: 30%;
+    height: 1px;
+    background-color: #000;
+    transition: 0.6s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .FQA:hover::after {
+    width: 70%;
+    transition: 0.6s;
+  }
+  #FQA_teach,
+  #FQA_des,
+  .FQA_des,
+  .FQA_teach {
+    display: none;
+  }
+  #FQA_teach:checked ~ label[for="FQA_teach"]::after {
+    width: 70%;
+    transition: 0.4s;
+  }
+  #FQA_teach:checked ~ .FQA_teach {
+    display: block;
+  }
+  #FQA_des:checked ~ label[for="FQA_des"]::after {
+    width: 70%;
+    transition: 0.4s;
+  }
+  #FQA_des:checked ~ .FQA_des {
+    display: block;
+  }
+  .FQA_des *,
+  .FQA_teach * {
+    font-size: var(--fzp-md);
+    padding: 10px;
+  }
+  .card-header {
+    position: relative;
+  }
+  .card-header .btn:after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    /* transform: rotate(45deg); */
+    background-color: var(--colorKey_1);
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: 0.1s;
+  }
+
+  .card-header .btn:focus::after {
+    height: 15px;
+    transform: rotate(90deg) skewX(45deg);
+    background-color: transparent;
+    border-bottom: 2px solid var(--colorKey_1);
+    border-right: 2px solid var(--colorKey_1);
+    transition: background-color 0s, transform 0.4s, border-bottom 0.4s,
+      border-right 0.4s;
+  }
+
+  #collapseFQA_teach1 p {
+    text-align: center;
+  }
+  .card-body * {
+    font-size: 20px;
+    padding: 0;
+    list-style: none;
+    text-align: justify;
+    letter-spacing: 0.1em;
+  }
+
+  .card-body {
+    font-size: 20px;
+    width: 65%;
+    margin: auto;
+  }
+  .btn {
+    background-color: #fff;
+  }
+  .btn:hover {
+    color: var(--colorKey_1);
+    font-weight: 600;
+  }
+  .btn:focus {
+    color: var(--colorKey_1);
+    font-weight: 600;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  .card-body > ul {
+    display: inline-block;
+  }
+  .card-body > ul > li {
+    display: inline-block;
+    text-align: center;
+  }
+  .card-body li ul {
+    display: block;
+    background-color: #fff;
+  }
+  .card-body > p {
+    margin-bottom: 40px;
+  }
+  .teach_focal_point_warp h3{
+    font-size: var(--fzh3-md);
+    display: inline-block;
+    width: 50%;
+    box-shadow: 0 1px 0px #aaa;
+    margin: 30px;
+  }
+  .teach_focal_point{
+    padding: 0;
+  }
+  .list-inline-item {
+    display: inline-block;
+    background-color: var(--colorAu_5);
+    border: 10px solid var(--colorAu_5);
+    vertical-align: middle;
+    width: calc(100% / 2 - 4px);
+    margin-bottom: 5px;
+    padding: 0;
+  }
+
+  .list-inline-item:nth-of-type(1){
+    border-radius: 0 20px 0px 20px;
+  }
+  .list-inline-item:nth-of-type(2){
+    border-radius: 20px 0px 20px 0px;
+  }
+  .list-inline-item:nth-of-type(3){
+    border-radius: 20px 0px 20px 0px;
+  }
+  .list-inline-item:nth-of-type(4){
+    border-radius: 0 20px 0px 20px;
+  }
+  .list-inline-item:nth-of-type(1) ul{
+    border-radius: 0 20px 0px 20px;
+  }
+  .list-inline-item:nth-of-type(2) ul{
+    border-radius: 20px 0px 20px 0px;
+  }
+  .list-inline-item:nth-of-type(3) ul{
+    border-radius: 20px 0px 20px 0px;
+  }
+  .list-inline-item:nth-of-type(4) ul{
+    border-radius: 0 20px 0px 20px;
+  }
+  .list-inline-item ul{
+    background-color: #fff;
+    padding: 10% 15px 10%;
+  }
+
+  .list-inline-item ul li{
+    padding: 0;
+  }
+  .list-inline-item p{
+    font-size: 20px;
+    padding:0 0 10px;
+  } 
+}
+  /************************************************************************************/
+/*min-width  992*/
+@media screen and (min-width: 992px) {
+  /*桌機992-首頁-第三屏ProductIteml*/
+  .ProductItemTitle:after,
+  .ProductItemTitle:before {
+    content: "";
+    display: block;
+    width: 20%;
+  }
+
+}

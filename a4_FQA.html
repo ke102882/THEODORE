@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/lightgallery.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>THEODORE</title>
+    <style>
+      .FQAlist {
+        margin: 25px 0 25px;
+      }
+      .FQAlist label {
+        padding: 5px;
+        margin: 1% 1%;
+        background-color: #0f01;
+        display: inline-block;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      /* .FQAlist label:nth-of-type(1) {
+        background-color: #0f05;
+      } */
+      .FQAtitle1 .col-md-5 {
+        float: left;
+        padding-bottom: 5%;
+      }
+      .FQAtitle2 .col-md-5 {
+        float: right;
+        padding-bottom: 5%;
+      }
+      /* .FQA_img {
+      } */
+      .FQAtitle1,
+      .FQAtitle2 {
+        position: relative;
+        margin: 50px 0 100px;
+      }
+      .FQA_text:before,
+      .FQA_text:before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
+
+      .FQAtitle1 .FQA_text:after,
+      .FQAtitle2 .FQA_text:after {
+        content: "";
+        position: absolute;
+        top: 40px;
+        bottom: -100px;
+        margin: auto;
+        background-color: rgb(190, 220, 199, 0.8);
+        /* border-bottom: 1px solid #000; */
+        z-index: -1;
+      }
+      .FQAtitle1 .FQA_text:after,
+      .FQAtitle2 .FQA_text:after {
+        left: 26px;
+        right: 26px;
+      }
+      .FQA_text {
+        padding-top: 30px;
+        position: ;
+      }
+      .FQA_text p {
+        text-align: justify;
+      }
+
+      .FQAtitle1 h2,
+      .FQAtitle2 h2 {
+        font-size: 24px;
+        border-bottom: 2px solid #aaa;
+        width: 100%;
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 0 0 5px #aaa;
+        top: -10px;
+        right: 0;
+        vertical-align: middle;
+        text-align: center
+        left: 0;
+      }
+      .owl-carousel .owl-stage-outer {
+        height: 450px !important;
+      }
+      .FQA.h2{
+        font-size: 18px ;
+      }
+      @media screen and (min-width: 768px) {
+        .FQA.h2{
+        font-size: 30px ;
+      }
+        .FQAtitle1 .FQA_text:after,
+        .FQAtitle2 .FQA_text:after {
+          content: "";
+          position: absolute;
+          top: 40px;
+          bottom: 50px;
+          margin: auto;
+          background-color: rgb(190, 220, 199, 0.8);
+          /* border-bottom: 1px solid #000; */
+          z-index: -1;
+        }
+        .FQAtitle1 .FQA_text:after,
+        .FQAtitle2 .FQA_text:after {
+          left: 15%;
+          right: 15%;
+        }
+        .FQAtitle1 h2,
+        .FQAtitle2 h2 {
+          font-size: 24px;
+          border-bottom: 2px solid #aaa;
+          width: 50%;
+          position: absolute;
+          background-color: #fff;
+          box-shadow: 0 0 5px #aaa;
+          top: 0px;
+        }
+        .FQAtitle1 h2 {
+          left: 50%;
+          transform: translateX(-25%);
+        }
+        .FQAtitle2 h2 {
+          right: 50%;
+          transform: translateX(25%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" name="" id="hb_con" />
+
+    <header>
+      <label for="hb_con" class="hb"><span></span></label>
+      <a href="index.html" class="logo"
+        ><img src="LOGO3.png" alt="THEODORE"
+      /></a>
+
+      <nav class="meun">
+        <a href="a2_Shop.html">植物盆栽<span></span></a>
+        <a href="javascript:;">種植用具<span></span></a>
+        <a href="a4_FQA.html" class="op1">Q&A<span></span></a>
+        <a href="a5_article.html">種植交流<span></span></a>
+        <a href="javascript:;" class="hb_meunshow">會員登入</a>
+        <a href="javascript:;" class="hb_meunshow">聯絡客服</a>
+      </nav>
+
+      <a href="javascript:;" class="search"><img src="Icon/search.png"/></a>
+      <a href="javascript:;" class="shopcar"><img src="Icon/shopcar.png"/></a>
+    </header>
+    <div class="space" id="go"></div>
+    <section class="DAcarouselFQA">
+      <div class="DAcarouselDiv ib">
+        <!--
+          <h3>FQA</h3>
+          <p>為您解答各種常見問題</p>
+        -->
+      </div>
+    </section>
+    <div class="FQA_wrap">
+      <input type="radio" name="FQA" id="FQA_teach" checked />
+      <input type="radio" name="FQA" id="FQA_des" />
+
+      <label for="FQA_teach" class="FQA h2">種植教學</label>
+      <label for="FQA_des" class="FQA h2">購物說明</label>
+
+      <section class="FQA_des">
+        <input type="radio" name="FQA_des" id="FQA_des1" checked />
+
+        <div class="FQAlist">
+          <label for="FQA_des1">#運費補助</label>
+          <label for="FQA_des2">#申請退貨</label>
+          <label for="FQA_des3">#付款方式</label>
+          <label for="FQA_des4">#寄送方式</label>
+          <label for="FQA_des5">#運費補助</label>
+          <label for="FQA_des6">#申請退貨</label>
+          <label for="FQA_des7">#付款方式</label>
+          <label for="FQA_des8">#寄送方式</label>
+        </div>
+        <div class="FQA_des_content des1">
+          <h2>#運費補助</h2>
+          <div class="text">
+            <ul>
+              <li>
+                線上轉帳匯款、ATM虛擬帳戶匯款、信用卡線上刷卡：
+                <p>需酌收運費80元，若單筆購物滿5000元，即可享有免運費優惠。</p>
+              </li>
+              <li>
+                ‧宅配貨到付款：
+                <p>
+                  需酌收運費80元與宅配代收手續費40元，若單筆購物滿5000元，即可享有免運費優惠。
+                  (優惠不含宅配代收手續費)
+                </p>
+              </li>
+              <li>
+                ‧7-11門市取貨：
+                <p>需酌收運費80元，若單筆購物滿5000元，即可享有免運費優惠。</p>
+              </li>
+              <li>
+                7-11門市取貨需先完成線上刷卡或轉帳匯款，無費用代收服務，敬請見諒
+              </li>
+              <li>貨到付款的金額上限為5萬元</li>
+              <li>貨到付款僅能以現金支付，恕不接受刷卡，敬請見諒</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="FQA_teach">
+        <input type="radio" name="FQA_teach" id="FQA_teach1" checked />
+        <input type="radio" name="FQA_teach" id="FQA_teach2" />
+        <input type="radio" name="FQA_teach" id="FQA_teach3" />
+        <input type="radio" name="FQA_teach" id="FQA_teach4" />
+        <input type="radio" name="FQA_teach" id="FQA_teach5" />
+        <input type="radio" name="FQA_teach" id="FQA_teach6" />
+        <input type="radio" name="FQA_teach" id="FQA_teach7" />
+        <input type="radio" name="FQA_teach" id="FQA_teach8" />
+        <input type="radio" name="FQA_teach" id="FQA_teach9" />
+        <input type="radio" name="FQA_teach" id="FQA_teach10" />
+        <input type="radio" name="FQA_teach" id="FQA_teach11" />
+        <input type="radio" name="FQA_teach" id="FQA_teach12" />
+        <input type="radio" name="FQA_teach" id="FQA_teach13" />
+        <input type="radio" name="FQA_teach" id="FQA_teach14" />
+        <input type="radio" name="FQA_teach" id="FQA_teach15" />
+        <input type="radio" name="FQA_teach" id="FQA_teach16" />
+
+        <div class="FQAlist">
+          <label for="FQA_teach1">#如何照顧植物</label>
+          <label for="FQA_teach2">#福祿桐</label>
+          <label for="FQA_teach3">#虎尾蘭</label>
+          <label for="FQA_teach4">#聖誕紅/一品紅</label>
+          <label for="FQA_teach5">#阿波羅</label>
+          <label for="FQA_teach6">#水冷草/冷水花</label>
+          <label for="FQA_teach7">#萊姆黃金葛</label>
+          <label for="FQA_teach8">#椒草</label>
+          <label for="FQA_teach9">#粗肋草</label>
+          <label for="FQA_teach10">#變葉木</label>
+          <label for="FQA_teach11">#火鶴花</label>
+          <label for="FQA_teach12">#黛粉葉</label>
+          <label for="FQA_teach13">#袖珍椰子</label>
+          <label for="FQA_teach14">#心葉蔓綠絨</label>
+          <label for="FQA_teach15">#合果芋</label>
+          <label for="FQA_teach16">#白金葛</label>
+        </div>
+        <div class="FQA_teach_content teach1">
+          <h2>#如何照顧植物</h2>
+          <div class="FQAtitle1 clearfix">
+            <div class="FQA_img  col-12 col-md-5">
+              <img src="pic/953168856-1024x1024.jpg" />
+            </div>
+            <div class="col-12 col-md-5">
+              <div class="FQA_text">
+                <h2>光照充足</h2>
+                <p>
+                  放於室內並不是指它們不需要光照喔！若陽光不足，可以藉日光燈或植物燈補充光照量，至少要滿足我們肉眼閱讀書報時不會覺得暗的那種亮度，才滿足光照充足定義上的最低要求，不過還是自然的日照為最好。
+                </p>
+                <p>
+                  若室內光線過暗，可將耐陰植物在室內及室外輪流放置1-2個星期，但不可放於陽光直射處，需有遮陰，以免植物灼傷或適應不良。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="FQAtitle2 clearfix">
+            <div class="FQA_img  col-12 col-md-5">
+              <img src="pic/cacti-decoration-flora-37076.jpg" />
+            </div>
+            <div class="col-12 col-md-5">
+              <div class="FQA_text">
+                <h2>通風良好</h2>
+                <p>
+                  土壤要能保水卻又透氣，至少要有對外窗的空間，室內空氣要能與外界對流交換，溼度才能夠跟著調節。
+                </p>
+                <p>
+                  建議選擇透氣性好、排水性好、保水性佳的土質，能為根系有效輸送空氣和水分，卻又不會爛根；弱酸性的土壤是因大部分植物喜歡弱酸性的環境，建議可以選擇由泥碳胎、珍珠石、泥碳土、蛭石等組合而成的人工栽培土取代土壤。
+                </p>
+                <p>
+                  註：栽培土事先已經過消毒，不像一般土壤可能含有糞便、微生物或其他雜質，不但乾淨衛生，通透性好，水分也不易堆積，且保水力佳，即使兩、三天不澆水，也沒有問題。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="FQAtitle1 clearfix">
+            <div class="FQA_img  col-12 col-md-5">
+              <img src="pic/garden-gardening-plant-6442.jpg" alt="適量澆水" />
+            </div>
+            <div class="col-12 col-md-5">
+              <div class="FQA_text">
+                <h2>適時適量澆水</h2>
+                <p>
+                  最好的澆水節奏是介質（一般是培養土）要把握「乾了才再濕」的原則，而且每次澆完水隔一段時間之後，介質不再吸收保存的水份就應該要倒掉。
+                </p>
+                <p>
+                  註：栽培土事先已經過消毒，不像一般土壤可能含有糞便、微生物或其他雜質，不但乾淨衛生，通透性好，水分也不易堆積，且保水力佳，即使兩、三天不澆水，也沒有問題。
+                </p>
+                <p>
+                  當環境滿足光照充足及通風良好的條件時，才在購買一個月後開始定期添加營養液或長效肥。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="FQAtitle2 clearfix">
+            <div class="FQA_img  col-12 col-md-5">
+              <img src="pic/1-1P5111H426122.jpg" alt="營養肥料" />
+            </div>
+            <div class="col-12 col-md-5">
+              <div class="FQA_text">
+                <h2>補充營養</h2>
+                <p>
+                  當環境滿足光照充足及通風良好的條件時，才在購買一個月後開始定期添加營養液或長效肥。
+                </p>
+                <p>
+                  註：栽培土事先已經過消毒，不像一般土壤可能含有糞便、微生物或其他雜質，不但乾淨衛生，通透性好，水分也不易堆積，且保水力佳，即使兩、三天不澆水，也沒有問題。
+                </p>
+                <p>
+                  最好的澆水節奏是介質（一般是培養土）要把握「乾了才再濕」的原則，而且每次澆完水隔一段時間之後，介質不再吸收保存的水份就應該要倒掉。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="FQA_teach_content teach2 clearfix">
+          <h2>#福祿桐</h2>
+          <div style="clear:both"></div>
+          <div class="owl-carousel owl-theme col-12 col-md-5">
+            <div class="item">
+              <div class="pic col-9">
+                <img src="pic/DSC_7534-324x324.jpg" alt="福祿桐" />
+              </div>
+              <h4>福祿桐(無土)</h4>
+              <span>$259</span>
+              <div class="icon">
+                <a href="javascript:;" class="love col-6">
+                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
+                </a>
+                <a href="javascript:;" class="addshopcar col-6">
+                  <i class="fas fa-cart-plus"></i>
+                  <i class="fas fa-check-circle"></i>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pic col-9">
+                <img src="pic/DSC_5711-324x324.jpg" alt="福祿桐" />
+              </div>
+              <h4>福祿桐(無土)</h4>
+              <span>$299</span>
+              <div class="icon">
+                <a href="javascript:;" class="love col-6">
+                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
+                </a>
+                <a href="javascript:;" class="addshopcar col-6">
+                  <i class="fas fa-cart-plus"></i>
+                  <i class="fas fa-check-circle"></i>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pic col-9">
+                <img src="pic/DSCF4096-324x324.jpg" alt="福祿桐" />
+              </div>
+              <h4>福祿桐(無土)</h4>
+              <span>$299</span>
+              <div class="icon">
+                <a href="javascript:;" class="love col-6">
+                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
+                </a>
+                <a href="javascript:;" class="addshopcar col-6">
+                  <i class="fas fa-cart-plus"></i>
+                  <i class="fas fa-check-circle"></i>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pic col-9">
+                <img src="pic/DSC_8067-1-324x324.jpg" alt="福祿桐" />
+              </div>
+              <h4>福祿桐(無土)</h4>
+              <span>$299</span>
+              <div class="icon">
+                <a href="javascript:;" class="love col-6">
+                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
+                </a>
+                <a href="javascript:;" class="addshopcar col-6">
+                  <i class="fas fa-cart-plus"></i>
+                  <i class="fas fa-check-circle"></i>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pic col-9">
+                <img src="pic/DSC_6985-324x324.jpg" alt="福祿桐" />
+              </div>
+              <h4>福祿桐(無土)</h4>
+              <span>$299</span>
+              <div class="icon">
+                <a href="javascript:;" class="love col-6">
+                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
+                </a>
+                <a href="javascript:;" class="addshopcar col-6">
+                  <i class="fas fa-cart-plus"></i>
+                  <i class="fas fa-check-circle"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="text col-12 col-md-6">
+            <h3>學名：Polyscias spp.</h3>
+            <h4>俗名：富貴樹</h4>
+            <p>原產地：熱帶美洲、波利尼西亞、亞洲、太平洋諸島</p>
+            <p>
+              植物特徵：福祿桐不需要過多的照顧而非常適用於大多數居家環境，植株支幹會挺直向上生長但又不會長得過於高大（大約可以長到90公分高），且夏季時葉片會顯得較為茂密翠綠，長得就像樹木又長壽而深受人們喜愛，花卉園藝市場大多以盆景型態銷售。
+            </p>
+            <span>常見問題</span>
+            <ul>
+              <li>
+                若您的福祿桐盆栽突然開始發生葉片脫落的情形，有時候是福祿桐盆栽所處環境的光照條件突然變少（例如，剛買回家時），有時候只是正常的代謝，都不需要驚慌，只要將盆栽擺放在明亮的空間（最好是陽光可以照的到的地方），還有提高植株周遭的濕度就可以幫助植株度過適應期。
+              </li>
+              <li>
+                福祿桐盆栽相當容易照顧，只要避免過度澆水及遭受寒害，幾乎不會有病蟲害的困擾喔！
+              </li>
+              <li>
+                若發現福祿桐盆栽生長緩慢或似乎停止生長，就有可能需要施肥或者是已經需要移盆了。
+              </li>
+              <li>福祿桐盆栽應避免兒童或寵物誤食。</li>
+            </ul>
+          </div>
+          <div style="clear:both"></div>
+          <div class="teach_focal_point_warp">
+            <h3>照顧重點</h3>
+            <ul class="teach_focal_point">
+              <li class="list-inline-item">
+                <p>環境光線</p>
+
+                <ul>
+                  <li>
+                    只要不是長時間黑暗的空間（如倉庫），虎尾蘭大多能夠適應不同光照條件的室內空間；光線明亮（至少要肉眼可以閱讀文字的光照程度）的環境最能讓虎尾蘭長得更肥美。
+                  </li>
+                </ul>
+              </li>
+              <li class="list-inline-item">
+                <p>通風濕度</p>
+
+                <ul>
+                  <li>
+                    不喜歡潮濕的環境，應該擺放在通風良好的位置，要注意當季節性高溫遇上潮濕氣候時，若擺放環境通風不良，虎尾蘭盆栽遭受病害感染的機率就比較大。
+                  </li>
+                </ul>
+              </li>
+              <li class="list-inline-item">
+                <p>澆水頻率</p>
+                <ul>
+                  <li>
+                    建議介質（通常是培養土或育苗綿）乾了之後再澆水,
+                    少許的水份就可維持虎尾蘭良好生長。
+                  </li>
+                </ul>
+              </li>
+              <li class="list-inline-item">
+                <p>營養需求</p>
+                <ul>
+                  <li>
+                    建議趁著澆水的時候，每月添加1次觀葉植物營養液（每次一小罐
+                    1:1 加水稀釋）。
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="FQA_teach_content teach3 clearfix">
+          <h2>#虎尾蘭</h2>
+          <div style="clear:both"></div>
+          <div class="owl-carousel owl-theme col-12 col-md-5">
+            <div class="item">
+              <div class="pic col-9">
+                <img src="pic/DSCF4155-324x324.jpg" alt="虎尾蘭" />
+              </div>
+              <h4>虎尾蘭(無土)</h4>
+              <span>$259</span>
+              <div class="icon">
+                <a href="javascript:;" class="love col-6">
+                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
+                </a>
+                <a href="javascript:;" class="addshopcar col-6">
+                  <i class="fas fa-cart-plus"></i>
+                  <i class="fas fa-check-circle"></i>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pic col-9">
+                <img src="pic/DSC_7049-324x324.jpg" alt="虎尾蘭" />
+              </div>
+              <h4>虎尾蘭(無土)</h4>
+              <span>$299</span>
+              <div class="icon">
+                <a href="javascript:;" class="love col-6">
+                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
+                </a>
+                <a href="javascript:;" class="addshopcar col-6">
+                  <i class="fas fa-cart-plus"></i>
+                  <i class="fas fa-check-circle"></i>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pic col-9">
+                <img src="pic/DSC_7541-324x324.jpg" alt="虎尾蘭" />
+              </div>
+              <h4>虎尾蘭(無土)</h4>
+              <span>$299</span>
+              <div class="icon">
+                <a href="javascript:;" class="love col-6">
+                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
+                </a>
+                <a href="javascript:;" class="addshopcar col-6">
+                  <i class="fas fa-cart-plus"></i>
+                  <i class="fas fa-check-circle"></i>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pic col-9">
+                <img src="pic/DSC_4528-324x324.jpg" alt="虎尾蘭" />
+              </div>
+              <h4>虎尾蘭(無土)</h4>
+              <span>$299</span>
+              <div class="icon">
+                <a href="javascript:;" class="love col-6">
+                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
+                </a>
+                <a href="javascript:;" class="addshopcar col-6">
+                  <i class="fas fa-cart-plus"></i>
+                  <i class="fas fa-check-circle"></i>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pic col-9">
+                <img src="pic/DSC_6959-324x324.jpg" alt="虎尾蘭" />
+              </div>
+              <h4>虎尾蘭(無土)</h4>
+              <span>$299</span>
+              <div class="icon">
+                <a href="javascript:;" class="love col-6">
+                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
+                </a>
+                <a href="javascript:;" class="addshopcar col-6">
+                  <i class="fas fa-cart-plus"></i>
+                  <i class="fas fa-check-circle"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="text col-12 col-md-6">
+            <h3>學名：sansevieria trifasciata</h3>
+            <h4>俗稱：虎尾蘭、虎皮蘭、錦蘭、黃尾蘭、岳母舌</h4>
+            <p>原產地：南非</p>
+            <p>
+              虎尾蘭是眾所皆知的空氣淨化植物，研究顯示一盆3吋大小的虎尾蘭盆栽，大約可以淨化1坪大的室內空氣，而且還有一個特點，虎尾蘭不分晝夜都能釋放氧氣，很適合擺放在人多的客廳、需要清新空氣的書房或想要一夜好眠的臥房。
+              您擔心自己是植物殺手嗎？虎尾蘭其實非常容易照顧，是相當適合新手入門栽種的植物，只要不要太長時間忘記澆水，虎尾蘭就會活得很好喔！
+            </p>
+            <span>常見問題</span>
+            <ul>
+              <li>
+                若您的福祿桐盆栽突然開始發生葉片脫落的情形，有時候是福祿桐盆栽所處環境的光照條件突然變少（例如，剛買回家時），有時候只是正常的代謝，都不需要驚慌，只要將盆栽擺放在明亮的空間（最好是陽光可以照的到的地方），還有提高植株周遭的濕度就可以幫助植株度過適應期。
+              </li>
+              <li>
+                福祿桐盆栽相當容易照顧，只要避免過度澆水及遭受寒害，幾乎不會有病蟲害的困擾喔！
+              </li>
+              <li>
+                若發現福祿桐盆栽生長緩慢或似乎停止生長，就有可能需要施肥或者是已經需要移盆了。
+              </li>
+              <li>福祿桐盆栽應避免兒童或寵物誤食。</li>
+            </ul>
+          </div>
+          <div style="clear:both"></div>
+          <div class="teach_focal_point_warp">
+            <h3>照顧重點</h3>
+            <ul class="teach_focal_point">
+              <li class="list-inline-item">
+                <p>環境光線</p>
+
+                <ul>
+                  <li>
+                    只要不是長時間黑暗的空間（如倉庫），虎尾蘭大多能夠適應不同光照條件的室內空間；光線明亮（至少要肉眼可以閱讀文字的光照程度）的環境最能讓虎尾蘭長得更肥美。
+                  </li>
+                </ul>
+              </li>
+              <li class="list-inline-item">
+                <p>通風濕度</p>
+
+                <ul>
+                  <li>
+                    不喜歡潮濕的環境，應該擺放在通風良好的位置，要注意當季節性高溫遇上潮濕氣候時，若擺放環境通風不良，虎尾蘭盆栽遭受病害感染的機率就比較大。
+                  </li>
+                </ul>
+              </li>
+              <li class="list-inline-item">
+                <p>澆水頻率</p>
+                <ul>
+                  <li>
+                    建議介質（通常是培養土或育苗綿）乾了之後再澆水,
+                    少許的水份就可維持虎尾蘭良好生長。
+                  </li>
+                </ul>
+              </li>
+              <li class="list-inline-item">
+                <p>營養需求</p>
+                <ul>
+                  <li>
+                    建議趁著澆水的時候，每月添加1次觀葉植物營養液（每次一小罐
+                    1:1 加水稀釋）。
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="FQA_teach_content teach4 clearfix">
+          <p>敬啟期待THEODORE更新最新植物資訊</p>
+        </div>
+        <div class="FQA_teach_content teach5 clearfix">
+          <p>敬啟期待THEODORE更新最新植物資訊</p>
+        </div>
+        <div class="FQA_teach_content teach6 clearfix">
+          <p>敬啟期待THEODORE更新最新植物資訊</p>
+        </div>
+        <div class="FQA_teach_content teach7 clearfix">
+          <p>敬啟期待THEODORE更新最新植物資訊</p>
+        </div>
+        <div class="FQA_teach_content teach8 clearfix">
+          <p>敬啟期待THEODORE更新最新植物資訊</p>
+        </div>
+        <div class="FQA_teach_content teach9 clearfix">
+          <p>敬啟期待THEODORE更新最新植物資訊</p>
+        </div>
+        <div class="FQA_teach_content teach10 clearfix">
+          <p>敬啟期待THEODORE更新最新植物資訊</p>
+        </div>
+        <div class="FQA_teach_content teach11 clearfix">
+          <p>敬啟期待THEODORE更新最新植物資訊</p>
+        </div>
+        <div class="FQA_teach_content teach12 clearfix">
+          <p>敬啟期待THEODORE更新最新植物資訊</p>
+        </div>
+        <div class="FQA_teach_content teach13 clearfix">
+          <p>敬啟期待THEODORE更新最新植物資訊</p>
+        </div>
+        <div class="FQA_teach_content teach14 clearfix">
+          <p>敬啟期待THEODORE更新最新植物資訊</p>
+        </div>
+        <div class="FQA_teach_content teach15 clearfix">
+          <p>敬啟期待THEODORE更新最新植物資訊</p>
+        </div>
+        <div class="FQA_teach_content teach16 clearfix">
+          <p>敬啟期待THEODORE更新最新植物資訊</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="article_space"></div>
+    <footer>
+      <a href="#go" class="top">TOP</a>
+      <div class="da_logo"><img src="LOGO.png" /></div>
+      <h1>THEODORE盆栽線上商店</h1>
+      <div class="community">
+        <a href="javascript:;" class="col-3 col-md-2"
+          ><img src="pic/FB.png"
+        /></a>
+        <a href="javascript:;" class="col-3 col-md-2"
+          ><img src="pic/IG.png"
+        /></a>
+        <a href="javascript:;" class="col-3 col-md-2"
+          ><img src="pic/twitter.png"
+        /></a>
+      </div>
+      <ul class="clearfix">
+        <li class="service col-4 col-md-6">
+          <h3>客服中心</h3>
+          <a href="javascript:;">查詢帳號密碼</a>
+          <a href="javascript:;">客服信箱</a>
+          <a href="javascript:;">線上客服</a> <a href="javascript:;">Q&A</a>
+        </li>
+        <li class="MVP col-4 col-md-6">
+          <h3>會員服務</h3>
+          <a href="javascript:;">會員中心</a>
+          <a href="javascript:;">優惠查詢</a>
+          <a href="javascript:;">種植日記</a>
+          <a href="javascript:;">查詢訂貨</a>
+        </li>
+      </ul>
+      <p class="statement">© since 2018 theodore.com.tw All Rights Reserved.</p>
+    </footer>
+
+    <!--
+      <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"
+      ></script>
+    -->
+    <!-- <script src="js/lightgallery.min.js"></script> -->
+
+    <!--
+      <script type="text/javascript">
+        lightGallery(document.getElementById("lightgallery"));
+        lightGallery(document.getElementById("lightgallery2"));
+      </script>
+    -->
+
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 1,
+        nav: false,
+        responsive: {
+          0: {
+            items: 1
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

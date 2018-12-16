@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <style>
+      .articleWrap.col-md-3,
+      .articleWrap.col-md-6 {
+        float: left;
+      }
+      .articleWrap.col-md-3.flright {
+        float: right;
+        text-align: center;
+      }
+      .Shop_item_pis {
+        border: 1px solid #aaa;
+      }
+      .Shop_item:after,
+      .Shop_item:before {
+        height: 1px;
+        bottom: -9.5px;
+      }
+      .filter ul {
+        text-align: center;
+	  }
+	  .gm_name{
+		  text-align: right;
+		  padding: 10px 0;
+	  }
+	  
+	  .gm_name span{
+		  font-size: 15px;
+	  }
+	  .phone_hide ul li a{
+		font-size: 20px;
+	  }
+	  .phone_hide ul li a:hover{
+		font-size: 20px;
+		color: var(--colorAu_3);
+	  }
+	  @media screen and (min-width: 768px){
+		.hot_tag{
+			width: 65%;
+			padding: 10px 20px;
+			text-align: left;
+			margin: auto;
+			}
+	  }
+    </style>
+  </head>
+
+  <body>
+    <input type="checkbox" name="" id="hb_con" />
+
+    <header>
+      <label for="hb_con" class="hb"><span></span></label>
+      <a href="index.html" class="logo"
+        ><img src="LOGO3.png" alt="THEODORE"
+      /></a>
+
+      <nav class="meun">
+        <a href="a2_Shop.html">植物盆栽<span></span></a>
+        <a href="#">種植用具<span></span></a>
+        <a href="a4_FQA.html">Q&A<span></span></a>
+        <a href="a5_article.html" class="op1">種植交流<span></span></a>
+        <a href="#" class="hb_meunshow">會員登入</a>
+        <a href="#" class="hb_meunshow">聯絡客服</a>
+      </nav>
+
+      <a href="javascript:;" class="search"><img src="Icon/search.png"/></a>
+      <a href="javascript:;" class="shopcar"><img src="Icon/shopcar.png"/></a>
+    </header>
+
+    <div class="article_space"></div>
+
+    <div class="clearfix padWrap">
+      <div class="article_header">
+        <i class="fas fa-search"></i>
+        <input type="text" name="search" placeholder="請輸入關鍵字" />
+        <button type="submit">送出</button>
+        <div class="hot_tag">
+          <span>熱門關鍵字:</span>
+          <div class="tag">
+            <span>#土耕</span> <span>#水耕</span> <span>#迷你</span>
+            <span>#蚯蚓</span> <span>#肥料</span>
+          </div>
+        </div>
+      </div>
+      <section class="articleWrap phone_hide col-md-3">
+        <h3>官方文章TOP10</h3>
+        <ul>
+          <li>
+           
+			<a href="javascript:;" class="article_Hot_content">您擔心自己是植物殺手嗎？</a>
+			<div class="gm_name">
+					<span>小編-妹子</span> <span>2018/11/3</span>
+				  </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="articleWrap col-12 col-md-6">
+        <div class="article filter">
+          <ul class="col-12">
+            <li class="col-5">最新文章</li>
+            <li class="col-5">熱門文章</li>
+          </ul>
+        </div>
+        <article>
+          <div class="mvp col-12">
+            <div class="picwrap col-10">
+              <a href="javascript:;" class="v pic col-3"
+                ><img
+                  src="https://api.fnkr.net/testimg/50x50/00CED1/FFF/?text=img+placeholder"
+              /></a>
+              <div class="mvpname">
+                <a href="javascript:;">拉麵</a>
+                <p class="date">2018/09/21</p>
+              </div>
+            </div>
+            <ul class="col-2">
+              <li><a href="javascript:;"></a></li>
+              <li><a href="javascript:;"></a></li>
+              <li><a href="javascript:;"></a></li>
+            </ul>
+          </div>
+          <div class="article_album">
+            <img
+              src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder"
+            />
+          </div>
+          <div class="article_contier">
+            <p>
+              昨天收到盆栽組合，感覺好像玩拼圖一樣把它們都組好了。
+              蘭花的包裝實在超強的，所有植物都完全沒受傷完好無缺的到手上。
+              對園藝一竅不通的人來說真的很簡單。分為土栽，水栽，無土介質，自動澆水。室內適合放無土介質代替土栽植物，減少蚊蟲滋生。
+              土栽大約一週兩次澆水，無土約一次，自動給水就放到底盆讓他自己吸即可。
+              網站還有教什麼植物可以吸氨氣，甲苯，耐高二氧化碳低照度，
+              原來火鶴可以吸甲苯，真的長知識了。
+            </p>
+            <span class="see_more">...更多</span>
+          </div>
+          <button class="col-6">
+            <i class="far fa-heart">收藏</i> <i class="fas fa-heart">收藏</i>
+          </button>
+          <button class="col-6 see_mes">
+            <i class="far fa-comments">留言<span></span></i>
+          </button>
+          <!-- 第一個回復的人 -->
+          <div class="other_mes">
+            <div class="rmessenger ptt clearfix">
+              <div class="picwrap col-3">
+                <a href="javascript:;" class="v pic col-8"
+                  ><img
+                    src="https://api.fnkr.net/testimg/50x50/00CED1/FFF/?text=img+placeholder"
+                /></a>
+                <div class="mvpname">
+                  <a href="javascript:;">丼飯</a>
+                  <p class="date">2018/09/21</p>
+                </div>
+              </div>
+              <div class="rmessenger_p clearfix col-9">
+                <div class="article_contier">
+                  <p>
+                    原來火鶴可以吸甲苯，真的長知識了。原來火吸甲苯，真的長知識了。原來火鶴可以吸甲苯，真的長知識了。
+                  </p>
+                  <span class="see_more ptt">...更多</span>
+                </div>
+                <button class="rmes_for_who">回覆</button>
+                <button class="ban">檢舉</button>
+              </div>
+              <!-- 回復第一個人的A -->
+              <div class="rmes_for_who_contier clearfix col-11">
+                <div class="picwrap col-3">
+                  <a href="javascript:;" class="v pic col-8"
+                    ><img
+                      src="https://api.fnkr.net/testimg/50x50/00CED1/FFF/?text=img+placeholder"
+                  /></a>
+                  <div class="mvpname">
+                    <p class="gamer">牛排</p>
+                    <p class="date">2018/09/21</p>
+                  </div>
+                </div>
+                <div class="rmessenger_p clearfix col-9">
+                  <div class="article_contier ptt">
+                    <p>
+                      原來火鶴可以吸甲苯，真的長知識了。原來火吸甲苯，真的長知識了。原來火鶴可以吸甲苯，真的長知識了。的長知識了。
+                    </p>
+                    <span class="see_more ptt">...更多</span>
+                  </div>
+                  <button class="rmes_for_who_contier_tag">回覆</button>
+                  <button class="ban">檢舉</button>
+                </div>
+              </div>
+              <!-- 回復第一個人的B -->
+              <div class="rmes_for_who_contier clearfix col-11">
+                <div class="picwrap col-3">
+                  <a href="javascript:;" class="v pic col-8"
+                    ><img
+                      src="https://api.fnkr.net/testimg/50x50/00CED1/FFF/?text=img+placeholder"
+                  /></a>
+                  <div class="mvpname">
+                    <p class="gamer">烏龍麵</p>
+                    <p class="date">2018/09/21</p>
+                  </div>
+                </div>
+                <div class="rmessenger_p clearfix col-9">
+                  <div class="article_contier ptt">
+                    <p>
+                      原來火鶴可以吸甲苯，真的長知識了。原來火吸甲苯，真的長知識了。原來火鶴可以吸甲苯，真的長知識了。的長知識了。
+                    </p>
+                    <span class="see_more ptt">...更多</span>
+                  </div>
+                  <button class="rmes_for_who_contier_tag">回覆</button>
+                  <button class="ban">檢舉</button>
+                </div>
+              </div>
+
+              <!--
+                加入回復第一個人的輸入框
+
+                <div class="rmes_for_who_contier talk clearfix col-11">
+                	<div class="v pic col-2">
+                		<img src="https://api.fnkr.net/testimg/50x50/00CED1/FFF/?text=img+placeholder">
+                	</div>
+                	<input type="text" class="col-9 conHight" placeholder="回覆">
+                	<button class="rmes_for_who_contier_btn">回覆</button>
+                </div>
+              -->
+            </div>
+            <!-- 第二個回復的人 -->
+            <div class="rmessenger ptt clearfix">
+              <div class="picwrap col-3">
+                <a href="javascript:;" class="v pic col-8"
+                  ><img
+                    src="https://api.fnkr.net/testimg/50x50/00CED1/FFF/?text=img+placeholder"
+                /></a>
+                <div class="mvpname">
+                  <a href="javascript:;">豬排</a>
+                  <p class="date">2018/09/21</p>
+                </div>
+              </div>
+              <div class="rmessenger_p clearfix col-9">
+                <div class="article_contier">
+                  <p>
+                    原來火鶴可以吸甲苯，真的長知識了。原來火吸甲苯，真的長知識了。原來火鶴可以吸甲苯，真的長知識了。識了。
+                  </p>
+                  <span class="see_more">...更多</span>
+                </div>
+                <button class="rmes_for_who">回覆</button>
+                <button class="ban">檢舉</button>
+              </div>
+            </div>
+            <!-- 第三個回復的人 -->
+            <div class="rmessenger ptt clearfix">
+              <div class="picwrap col-3">
+                <a href="javascript:;" class="v pic col-8"
+                  ><img
+                    src="https://api.fnkr.net/testimg/50x50/00CED1/FFF/?text=img+placeholder"
+                /></a>
+                <div class="mvpname">
+                  <a href="javascript:;">握壽司</a>
+                  <p class="date">2018/09/21</p>
+                </div>
+              </div>
+              <div class="rmessenger_p clearfix col-9">
+                <div class="article_contier">
+                  <p>
+                    原來火鶴可以吸甲苯，真的長知識了。原來火吸甲苯，真的長知識了。原來火鶴可以吸甲苯，真的長知識了。識了。
+                  </p>
+                  <span class="see_more">...更多</span>
+                </div>
+                <button class="rmes_for_who">回覆</button>
+                <button class="ban">檢舉</button>
+              </div>
+            </div>
+            <!-- 第四個回復的人 -->
+            <div class="rmessenger ptt clearfix">
+              <div class="picwrap col-3">
+                <a href="javascript:;" class="v pic col-8"
+                  ><img
+                    src="https://api.fnkr.net/testimg/50x50/00CED1/FFF/?text=img+placeholder"
+                /></a>
+                <div class="mvpname">
+                  <a href="javascript:;">生魚片</a>
+                  <p class="date">2018/09/21</p>
+                </div>
+              </div>
+              <div class="rmessenger_p clearfix col-9">
+                <div class="article_contier">
+                  <p>
+                    原來火鶴可以吸甲苯，真的長知識了。原來火吸甲苯，真的長知識了。原來火鶴可以吸甲苯，真的長知識了。識了。
+                  </p>
+                  <span class="see_more">...更多</span>
+                </div>
+                <button class="rmes_for_who">回覆</button>
+                <button class="ban">檢舉</button>
+              </div>
+            </div>
+            <!-- 第五個回復的人 -->
+            <div class="rmessenger ptt clearfix">
+              <div class="picwrap col-3">
+                <a href="javascript:;" class="v pic col-8"
+                  ><img
+                    src="https://api.fnkr.net/testimg/50x50/00CED1/FFF/?text=img+placeholder"
+                /></a>
+                <div class="mvpname">
+                  <a href="javascript:;">披薩</a>
+                  <p class="date">2018/09/21</p>
+                </div>
+              </div>
+              <div class="rmessenger_p clearfix col-9">
+                <div class="article_contier">
+                  <p>
+                    原來火鶴可以吸甲苯，真的長知識了。原來火吸甲苯，真的長知識了。原來火鶴可以吸甲苯，真的長知識了。識了。
+                  </p>
+                  <span class="see_more">...更多</span>
+                </div>
+                <button class="rmes_for_who">回覆</button>
+                <button class="ban">檢舉</button>
+              </div>
+            </div>
+            <!-- 第六個回復的人 -->
+            <div class="rmessenger ptt clearfix">
+              <div class="picwrap col-3">
+                <a href="javascript:;" class="v pic col-8"
+                  ><img
+                    src="https://api.fnkr.net/testimg/50x50/00CED1/FFF/?text=img+placeholder"
+                /></a>
+                <div class="mvpname">
+                  <a href="javascript:;">漢堡</a>
+                  <p class="date">2018/09/21</p>
+                </div>
+              </div>
+              <div class="rmessenger_p clearfix col-9">
+                <div class="article_contier">
+                  <p>
+                    原來火鶴可以吸甲苯，真的長知識了。原來火吸甲苯，真的長知識了。原來火鶴可以吸甲苯，真的長知識了。識了。
+                  </p>
+                  <span class="see_more">...更多</span>
+                </div>
+                <button class="rmes_for_who">回覆</button>
+                <button class="ban">檢舉</button>
+              </div>
+            </div>
+          </div>
+          <div class="rmessenger">
+            <div class="v pic col-2">
+              <img
+                src="https://api.fnkr.net/testimg/50x50/00CED1/FFF/?text=img+placeholder"
+              />
+            </div>
+            <input type="text" class="col-6 rms" placeholder="留言" />
+            <button>發言</button>
+          </div>
+        </article>
+      </section>
+      <section class="articleWrap phone_hide col-md-3 flright">
+        <h3>你可能喜歡:</h3>
+        <ul>
+          <li>
+            <div class="Shop_item_pis col-md-6">
+              <div class="Shop_item">
+                <div class="pic">
+                  <a href="a3_shopin.html" class="pic_big">
+                    <img src="pic/DSC_7541-324x324.jpg" alt="" />
+                  </a>
+                </div>
+              </div>
+              <h3><a href="javascript:;">虎尾蘭草</a></h3>
+              <p>$299</p>
+            </div>
+          </li>
+          <li>
+            <div class="Shop_item_pis col-md-6">
+              <div class="Shop_item">
+                <div class="pic">
+                  <a href="a3_shopin.html" class="pic_big">
+                    <img src="pic/常春藤.jpg" alt="" />
+                  </a>
+                </div>
+              </div>
+              <h3><a href="javascript:;">常春藤</a></h3>
+              <p>$299</p>
+            </div>
+          </li>
+          <li>
+            <div class="Shop_item_pis col-md-6">
+              <div class="Shop_item">
+                <div class="pic">
+                  <a href="a3_shopin.html" class="pic_big">
+                    <img src="pic/DSC_7541-324x324.jpg" alt="" />
+                  </a>
+                </div>
+              </div>
+              <h3><a href="javascript:;">虎尾蘭草</a></h3>
+              <p>$299</p>
+            </div>
+          </li>
+          <li>
+            <div class="Shop_item_pis col-md-6">
+              <div class="Shop_item">
+                <div class="pic">
+                  <a href="a3_shopin.html" class="pic_big">
+                    <img src="pic/常春藤.jpg" alt="" />
+                  </a>
+                </div>
+              </div>
+              <h3><a href="javascript:;">常春藤</a></h3>
+              <p>$299</p>
+            </div>
+          </li>
+          <li>
+            <div class="Shop_item_pis col-md-6">
+              <div class="Shop_item">
+                <div class="pic">
+                  <a href="a3_shopin.html" class="pic_big">
+                    <img src="pic/DSC_7541-324x324.jpg" alt="" />
+                  </a>
+                </div>
+              </div>
+              <h3><a href="javascript:;">虎尾蘭草</a></h3>
+              <p>$299</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="PlantBookTitleWrap">
+      <a href="javascript:;"></a>
+      <div class="plantbooktitle_border">
+        <div class="plantbooktitle">
+          <h2>植物圖鑑</h2>
+          <a href="javascript:;" class="pic">
+            <img src="pic/book.PNG" /> <span>Open Book</span>
+          </a>
+          <p>擔心自己不會照顧植物嗎? THEODORE整理了植物特性，讓你更了解植物!</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <a href="#go" class="top">TOP</a>
+      <div class="da_logo"><img src="LOGO.png" /></div>
+      <h1>THEODORE盆栽線上商店</h1>
+      <div class="community">
+        <a href="javascript:;" class="col-3 col-md-2"
+          ><img src="pic/FB.png"
+        /></a>
+        <a href="javascript:;" class="col-3 col-md-2"
+          ><img src="pic/IG.png"
+        /></a>
+        <a href="javascript:;" class="col-3 col-md-2"
+          ><img src="pic/twitter.png"
+        /></a>
+      </div>
+      <ul class="clearfix">
+        <li class="service col-4 col-md-6">
+          <h3>客服中心</h3>
+          <a href="javascript:;">查詢帳號密碼</a>
+          <a href="javascript:;">客服信箱</a>
+          <a href="javascript:;">線上客服</a> <a href="javascript:;">Q&A</a>
+        </li>
+        <li class="MVP col-4 col-md-6">
+          <h3>會員服務</h3>
+          <a href="javascript:;">會員中心</a>
+          <a href="javascript:;">優惠查詢</a>
+          <a href="javascript:;">種植日記</a>
+          <a href="javascript:;">查詢訂貨</a>
+        </li>
+      </ul>
+      <p class="statement">© since 2018 theodore.com.tw All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        //文章高於140就overflow:hidden，並顯示[更多]按鈕。
+        _Height = 70;
+        _pttHeight = 50;
+        if ($(".article_contier p").height() > _Height) {
+          $(".article_contier p").height(_Height);
+          $(".article_contier p").css("overflow", "hidden");
+          $(".see_more").show();
+        }
+        if ($(".article_contier.ptt p").height() > _pttHeight) {
+          $(".article_contier.ptt p").height(_pttHeight);
+          $(".article_contier.ptt p").css("overflow", "hidden");
+          $(".see_more.ptt").show();
+        }
+        //點[更多]按鈕，該按鈕消失且文章overflow改visible。
+        $(".see_more").click(function() {
+          $(this)
+            .prev()
+            .css("overflow", "visible");
+          $(this).hide();
+        });
+        //點[留言]按鈕，顯示所有留言，再點一次會隱藏所有留言。
+        $(".other_mes").hide();
+        $(".see_mes").click(function() {
+          $(this)
+            .next(".other_mes")
+            .toggle();
+        });
+        //[留言]按鈕的數量依實際留言數更新。
+        var _mesLenght = $(".other_mes .rmessenger").length;
+        $(".see_mes span").text("(" + _mesLenght + ")");
+        //[回覆]加入回覆input text
+        $(".rmes_for_who").click(function() {
+          //<div class="rmes_for_who_contier talk clearfix col-11">
+          //<div class="v pic col-2">
+          //	<img src="https://api.fnkr.net/testimg/50x50/00CED1/FFF/?text=img+placeholder">
+          //</div>
+          //<input type="text" class="col-9 conHight" placeholder="回覆">
+          //<button class="rmes_for_who_contier_btn">回覆</button>
+          //</div>
+          $(this)
+            .parents(".rmessenger.ptt")
+            .append(
+              '<div class="rmes_for_who_contier talk clearfix col-11"><div class="v pic col-2"><img src="https://api.fnkr.net/testimg/50x50/00CED1/FFF/?text=img+placeholder"></div><input type="text" class="col-9 conHight" placeholder="回覆">	<button class="rmes_for_who_contier_btn">回覆</button></div>'
+            );
+          $(this).hide();
+
+          if ($(this).hide()) {
+            $(this)
+              .parents(".rmessenger.ptt")
+              .find($(".rmes_for_who_contier_tag"))
+              .click(function() {
+                var text = $(this)
+                  .parent()
+                  .prev()
+                  .find($(".mvpname .gamer"))
+                  .text();
+                $(this)
+                  .parents(".rmessenger.ptt")
+                  .find($(".conHight"))
+                  .val(text + " ");
+              });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
