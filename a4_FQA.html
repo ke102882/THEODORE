@@ -7,6 +7,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0"
     />
+    <link rel="stylesheet" href="css/animate.css" />
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
@@ -24,13 +26,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js"></script>
     <link type="text/css" rel="stylesheet" href="css/lightgallery.css" />
-
+    <script src="js/WOW.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="index.css" />
     <title>THEODORE</title>
     <style>
       .FQAlist {
-        margin: 25px 0 25px;
+        margin: 60px 0 25px;
       }
       .FQAlist label {
         padding: 5px;
@@ -51,8 +53,10 @@
         float: right;
         padding-bottom: 5%;
       }
-      /* .FQA_img {
-      } */
+      .FQA_img {
+        position: relative;
+        z-index: 1;
+      }
       .FQAtitle1,
       .FQAtitle2 {
         position: relative;
@@ -104,9 +108,7 @@
         text-align: center
         left: 0;
       }
-      .owl-carousel .owl-stage-outer {
-        height: 450px !important;
-      }
+
       .FQA.h2{
         font-size: 18px ;
       }
@@ -268,10 +270,10 @@
         <div class="FQA_teach_content teach1">
           <h2>#如何照顧植物</h2>
           <div class="FQAtitle1 clearfix">
-            <div class="FQA_img  col-12 col-md-5">
+            <div class="FQA_img col-12 col-md-5 wow fadeInLeft" data-wow-duration="4s">
               <img src="pic/953168856-1024x1024.jpg" />
             </div>
-            <div class="col-12 col-md-5">
+            <div class="col-12 col-md-5 wow fadeIn" data-wow-duration="2s">
               <div class="FQA_text">
                 <h2>光照充足</h2>
                 <p>
@@ -285,10 +287,10 @@
           </div>
 
           <div class="FQAtitle2 clearfix">
-            <div class="FQA_img  col-12 col-md-5">
+            <div class="FQA_img col-12 col-md-5 wow fadeInRight" data-wow-duration="4s">
               <img src="pic/cacti-decoration-flora-37076.jpg" />
             </div>
-            <div class="col-12 col-md-5">
+             <div class="col-12 col-md-5 wow fadeIn" data-wow-duration="2s">
               <div class="FQA_text">
                 <h2>通風良好</h2>
                 <p>
@@ -305,10 +307,10 @@
           </div>
 
           <div class="FQAtitle1 clearfix">
-            <div class="FQA_img  col-12 col-md-5">
+            <div class="FQA_img col-12 col-md-5 wow fadeInLeft" data-wow-duration="4s">
               <img src="pic/garden-gardening-plant-6442.jpg" alt="適量澆水" />
             </div>
-            <div class="col-12 col-md-5">
+             <div class="col-12 col-md-5 wow fadeIn" data-wow-duration="2s">
               <div class="FQA_text">
                 <h2>適時適量澆水</h2>
                 <p>
@@ -325,10 +327,10 @@
           </div>
 
           <div class="FQAtitle2 clearfix">
-            <div class="FQA_img  col-12 col-md-5">
+            <div class="FQA_img col-12 col-md-5 wow fadeInRight" data-wow-duration="4s">
               <img src="pic/1-1P5111H426122.jpg" alt="營養肥料" />
             </div>
-            <div class="col-12 col-md-5">
+             <div class="col-12 col-md-5 wow fadeIn" data-wow-duration="2s">
               <div class="FQA_text">
                 <h2>補充營養</h2>
                 <p>
@@ -347,86 +349,9 @@
         <div class="FQA_teach_content teach2 clearfix">
           <h2>#福祿桐</h2>
           <div style="clear:both"></div>
-          <div class="owl-carousel owl-theme col-12 col-md-5">
-            <div class="item">
-              <div class="pic col-9">
-                <img src="pic/DSC_7534-324x324.jpg" alt="福祿桐" />
-              </div>
-              <h4>福祿桐(無土)</h4>
-              <span>$259</span>
-              <div class="icon">
-                <a href="javascript:;" class="love col-6">
-                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
-                </a>
-                <a href="javascript:;" class="addshopcar col-6">
-                  <i class="fas fa-cart-plus"></i>
-                  <i class="fas fa-check-circle"></i>
-                </a>
-              </div>
-            </div>
-            <div class="item">
-              <div class="pic col-9">
-                <img src="pic/DSC_5711-324x324.jpg" alt="福祿桐" />
-              </div>
-              <h4>福祿桐(無土)</h4>
-              <span>$299</span>
-              <div class="icon">
-                <a href="javascript:;" class="love col-6">
-                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
-                </a>
-                <a href="javascript:;" class="addshopcar col-6">
-                  <i class="fas fa-cart-plus"></i>
-                  <i class="fas fa-check-circle"></i>
-                </a>
-              </div>
-            </div>
-            <div class="item">
-              <div class="pic col-9">
-                <img src="pic/DSCF4096-324x324.jpg" alt="福祿桐" />
-              </div>
-              <h4>福祿桐(無土)</h4>
-              <span>$299</span>
-              <div class="icon">
-                <a href="javascript:;" class="love col-6">
-                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
-                </a>
-                <a href="javascript:;" class="addshopcar col-6">
-                  <i class="fas fa-cart-plus"></i>
-                  <i class="fas fa-check-circle"></i>
-                </a>
-              </div>
-            </div>
-            <div class="item">
-              <div class="pic col-9">
-                <img src="pic/DSC_8067-1-324x324.jpg" alt="福祿桐" />
-              </div>
-              <h4>福祿桐(無土)</h4>
-              <span>$299</span>
-              <div class="icon">
-                <a href="javascript:;" class="love col-6">
-                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
-                </a>
-                <a href="javascript:;" class="addshopcar col-6">
-                  <i class="fas fa-cart-plus"></i>
-                  <i class="fas fa-check-circle"></i>
-                </a>
-              </div>
-            </div>
-            <div class="item">
-              <div class="pic col-9">
-                <img src="pic/DSC_6985-324x324.jpg" alt="福祿桐" />
-              </div>
-              <h4>福祿桐(無土)</h4>
-              <span>$299</span>
-              <div class="icon">
-                <a href="javascript:;" class="love col-6">
-                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
-                </a>
-                <a href="javascript:;" class="addshopcar col-6">
-                  <i class="fas fa-cart-plus"></i>
-                  <i class="fas fa-check-circle"></i>
-                </a>
-              </div>
+           <div class="col-12 col-md-5 wow fadeIn" data-wow-duration="2s">
+            <div class="pic col-12">
+              <img src="pic/DSC_7534-324x324.jpg" alt="福祿桐" />
             </div>
           </div>
           <div class="text col-12 col-md-6">
@@ -453,129 +378,36 @@
           <div style="clear:both"></div>
           <div class="teach_focal_point_warp">
             <h3>照顧重點</h3>
-            <ul class="teach_focal_point">
-              <li class="list-inline-item">
-                <p>環境光線</p>
-
-                <ul>
-                  <li>
-                    只要不是長時間黑暗的空間（如倉庫），虎尾蘭大多能夠適應不同光照條件的室內空間；光線明亮（至少要肉眼可以閱讀文字的光照程度）的環境最能讓虎尾蘭長得更肥美。
-                  </li>
-                </ul>
-              </li>
-              <li class="list-inline-item">
-                <p>通風濕度</p>
-
-                <ul>
-                  <li>
-                    不喜歡潮濕的環境，應該擺放在通風良好的位置，要注意當季節性高溫遇上潮濕氣候時，若擺放環境通風不良，虎尾蘭盆栽遭受病害感染的機率就比較大。
-                  </li>
-                </ul>
-              </li>
-              <li class="list-inline-item">
-                <p>澆水頻率</p>
-                <ul>
-                  <li>
-                    建議介質（通常是培養土或育苗綿）乾了之後再澆水,
-                    少許的水份就可維持虎尾蘭良好生長。
-                  </li>
-                </ul>
-              </li>
-              <li class="list-inline-item">
-                <p>營養需求</p>
-                <ul>
-                  <li>
-                    建議趁著澆水的時候，每月添加1次觀葉植物營養液（每次一小罐
-                    1:1 加水稀釋）。
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            <div class="teach_focal_point col-12 col-md-4">
+              <h4>環境光線</h4>
+              <p>只要不是長時間黑暗的空間（如倉庫），虎尾得更肥美。</p>
+            </div>
+            <div class="teach_focal_point col-12 col-md-4">
+              <h4>通風濕度</h4>
+              <p>
+                不喜歡潮濕的環境，應該擺放在通風良好的位置，要注意當季節性高溫遇上潮濕氣候時，若擺放環境通風不良，虎尾蘭盆栽遭受病害感染的機率就比較大。
+              </p>
+            </div>
+            <div class="teach_focal_point col-12 col-md-4">
+              <h4>澆水頻率</h4>
+              <p>
+                建議介質（通常是培養土或育苗綿）乾了之後再澆水,
+                少許的水份就可維持虎尾蘭良好生長。
+              </p>
+            </div>
+            <div class="teach_focal_point col-12 col-md-4">
+              <h4>營養需求</h4>
+              <p>
+                建議趁著澆水的時候，每月添加1次觀葉植物營養液（每次一小罐 1:1
+                加水稀釋）。
+              </p>
+            </div>
           </div>
         </div>
         <div class="FQA_teach_content teach3 clearfix">
-          <h2>#虎尾蘭</h2>
-          <div style="clear:both"></div>
-          <div class="owl-carousel owl-theme col-12 col-md-5">
-            <div class="item">
-              <div class="pic col-9">
-                <img src="pic/DSCF4155-324x324.jpg" alt="虎尾蘭" />
-              </div>
-              <h4>虎尾蘭(無土)</h4>
-              <span>$259</span>
-              <div class="icon">
-                <a href="javascript:;" class="love col-6">
-                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
-                </a>
-                <a href="javascript:;" class="addshopcar col-6">
-                  <i class="fas fa-cart-plus"></i>
-                  <i class="fas fa-check-circle"></i>
-                </a>
-              </div>
-            </div>
-            <div class="item">
-              <div class="pic col-9">
-                <img src="pic/DSC_7049-324x324.jpg" alt="虎尾蘭" />
-              </div>
-              <h4>虎尾蘭(無土)</h4>
-              <span>$299</span>
-              <div class="icon">
-                <a href="javascript:;" class="love col-6">
-                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
-                </a>
-                <a href="javascript:;" class="addshopcar col-6">
-                  <i class="fas fa-cart-plus"></i>
-                  <i class="fas fa-check-circle"></i>
-                </a>
-              </div>
-            </div>
-            <div class="item">
-              <div class="pic col-9">
-                <img src="pic/DSC_7541-324x324.jpg" alt="虎尾蘭" />
-              </div>
-              <h4>虎尾蘭(無土)</h4>
-              <span>$299</span>
-              <div class="icon">
-                <a href="javascript:;" class="love col-6">
-                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
-                </a>
-                <a href="javascript:;" class="addshopcar col-6">
-                  <i class="fas fa-cart-plus"></i>
-                  <i class="fas fa-check-circle"></i>
-                </a>
-              </div>
-            </div>
-            <div class="item">
-              <div class="pic col-9">
-                <img src="pic/DSC_4528-324x324.jpg" alt="虎尾蘭" />
-              </div>
-              <h4>虎尾蘭(無土)</h4>
-              <span>$299</span>
-              <div class="icon">
-                <a href="javascript:;" class="love col-6">
-                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
-                </a>
-                <a href="javascript:;" class="addshopcar col-6">
-                  <i class="fas fa-cart-plus"></i>
-                  <i class="fas fa-check-circle"></i>
-                </a>
-              </div>
-            </div>
-            <div class="item">
-              <div class="pic col-9">
-                <img src="pic/DSC_6959-324x324.jpg" alt="虎尾蘭" />
-              </div>
-              <h4>虎尾蘭(無土)</h4>
-              <span>$299</span>
-              <div class="icon">
-                <a href="javascript:;" class="love col-6">
-                  <i class="far fa-heart"></i> <i class="fas fa-heart"></i>
-                </a>
-                <a href="javascript:;" class="addshopcar col-6">
-                  <i class="fas fa-cart-plus"></i>
-                  <i class="fas fa-check-circle"></i>
-                </a>
-              </div>
+           <div class="col-12 col-md-5 wow fadeIn" data-wow-duration="2s">
+            <div class="pic col-12">
+              <img src="pic/DSCF4155-324x324.jpg" alt="虎尾蘭" />
             </div>
           </div>
           <div class="text col-12 col-md-6">
@@ -603,47 +435,34 @@
           <div style="clear:both"></div>
           <div class="teach_focal_point_warp">
             <h3>照顧重點</h3>
-            <ul class="teach_focal_point">
-              <li class="list-inline-item">
-                <p>環境光線</p>
-
-                <ul>
-                  <li>
-                    只要不是長時間黑暗的空間（如倉庫），虎尾蘭大多能夠適應不同光照條件的室內空間；光線明亮（至少要肉眼可以閱讀文字的光照程度）的環境最能讓虎尾蘭長得更肥美。
-                  </li>
-                </ul>
-              </li>
-              <li class="list-inline-item">
-                <p>通風濕度</p>
-
-                <ul>
-                  <li>
-                    不喜歡潮濕的環境，應該擺放在通風良好的位置，要注意當季節性高溫遇上潮濕氣候時，若擺放環境通風不良，虎尾蘭盆栽遭受病害感染的機率就比較大。
-                  </li>
-                </ul>
-              </li>
-              <li class="list-inline-item">
-                <p>澆水頻率</p>
-                <ul>
-                  <li>
-                    建議介質（通常是培養土或育苗綿）乾了之後再澆水,
-                    少許的水份就可維持虎尾蘭良好生長。
-                  </li>
-                </ul>
-              </li>
-              <li class="list-inline-item">
-                <p>營養需求</p>
-                <ul>
-                  <li>
-                    建議趁著澆水的時候，每月添加1次觀葉植物營養液（每次一小罐
-                    1:1 加水稀釋）。
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            <div class="teach_focal_point col-12 col-md-4">
+              <h4>環境光線</h4>
+              <p>
+                只要不是長時間黑暗的空間（如倉庫），虎尾蘭大多能夠適應不同光照條件的室內空間；光線明亮（至少要肉眼可以閱讀文字的光照程度）的環境最能讓虎尾蘭長得更肥美。
+              </p>
+            </div>
+            <div class="teach_focal_point col-12 col-md-4">
+              <h4>通風濕度</h4>
+              <p>
+                不喜歡潮濕的環境，應該擺放在通風良好的位置，要注意當季節性高溫遇上潮濕氣候時，若擺放環境通風不良，虎尾蘭盆栽遭受病害感染的機率就比較大。
+              </p>
+            </div>
+            <div class="teach_focal_point col-12 col-md-4">
+              <h4>澆水頻率</h4>
+              <p>
+                建議介質（通常是培養土或育苗綿）乾了之後再澆水,
+                少許的水份就可維持虎尾蘭良好生長。
+              </p>
+            </div>
+            <div class="teach_focal_point col-12 col-md-4">
+              <h4>營養需求</h4>
+              <p>
+                建議趁著澆水的時候，每月添加1次觀葉植物營養液（每次一小罐 1:1
+                加水稀釋）。
+              </p>
+            </div>
           </div>
         </div>
-
         <div class="FQA_teach_content teach4 clearfix">
           <p>敬啟期待THEODORE更新最新植物資訊</p>
         </div>
@@ -735,18 +554,17 @@
         lightGallery(document.getElementById("lightgallery2"));
       </script>
     -->
-
+    <script src="js/WOW.js"></script>
+    <!-- <script src="js/wow.min.js"></script> -->
     <script>
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        margin: 1,
-        nav: false,
-        responsive: {
-          0: {
-            items: 1
-          }
-        }
+      wow = new WOW({
+        boxClass: "wow", // default
+        animateClass: "animated", // default
+        offset: 0, // default
+        mobile: false, // default
+        live: true // default
       });
+      wow.init();
     </script>
   </body>
 </html>

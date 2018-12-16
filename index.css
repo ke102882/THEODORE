@@ -1835,10 +1835,11 @@ input[name="FQA_des"]{
 }
 .FQA_teach_content > h2,
 .FQA_des_content > h2{
-  display: inline;
+  display: inline-block;
   border-radius: 20px;
   font-size: var(--fzh3-md);
   background-color: #0f05;
+  margin: 50px 0;
 }
 .FQA_teach_content .col-md-5{
   float: left;
@@ -1985,57 +1986,51 @@ a:hover {
 }
 .teach_focal_point_warp h3{
   font-size: var(--fzh3-md);
-  display: inline-block;
+  /* display: inline-block; */
   width: 50%;
   box-shadow: 0 1px 0px #aaa;
-  margin: 30px;
+  margin: 30px auto;
 }
-.teach_focal_point{
-  padding: 0;
-}
-.list-inline-item {
+.teach_focal_point {
   display: inline-block;
-  background-color: var(--colorAu_5);
+  background-color: #fff;
+  height: 0;
   border: 10px solid var(--colorAu_5);
   vertical-align: middle;
   width: calc(100% / 2 - 4px);
   margin-bottom: 5px;
   padding: 0;
+  padding-bottom: 15%;
 }
-
-.list-inline-item:nth-of-type(1){
+.teach_focal_point h4{
+  background-color: var(--colorAu_5);
+  padding: 10px;
+}
+.teach_focal_point:nth-of-type(1){
   border-radius: 0 20px 0px 20px;
 }
-.list-inline-item:nth-of-type(2){
+.teach_focal_point:nth-of-type(2){
   border-radius: 20px 0px 20px 0px;
 }
-.list-inline-item:nth-of-type(3){
+.teach_focal_point:nth-of-type(3){
   border-radius: 20px 0px 20px 0px;
 }
-.list-inline-item:nth-of-type(4){
+.teach_focal_point:nth-of-type(4){
   border-radius: 0 20px 0px 20px;
 }
-.list-inline-item:nth-of-type(1) ul{
+.teach_focal_point:nth-of-type(1) ul{
   border-radius: 0 20px 0px 20px;
 }
-.list-inline-item:nth-of-type(2) ul{
+.teach_focal_point:nth-of-type(2) ul{
   border-radius: 20px 0px 20px 0px;
 }
-.list-inline-item:nth-of-type(3) ul{
+.teach_focal_point:nth-of-type(3) ul{
   border-radius: 20px 0px 20px 0px;
 }
-.list-inline-item:nth-of-type(4) ul{
+.teach_focal_point:nth-of-type(4) ul{
   border-radius: 0 20px 0px 20px;
 }
-.list-inline-item ul{
-  background-color: #fff;
-  padding: 10% 15px 10%;
-}
-
-.list-inline-item ul li{
-  padding: 0;
-}
-.list-inline-item p{
+.teach_focal_point p{
   font-size: 20px;
   padding:0 0 10px;
 } 
@@ -3025,13 +3020,25 @@ a:hover {
   }
   .teach_focal_point_warp h3{
     font-size: var(--fzh3-md);
-    display: inline-block;
+    /* display: inline-block; */
     width: 50%;
     box-shadow: 0 1px 0px #aaa;
-    margin: 30px;
+    margin: 30px auto;
   }
-  .teach_focal_point{
+  .teach_focal_point {
+    display: inline-block;
+    background-color: #fff;
+    height: 0;
+    border: 10px solid var(--colorAu_5);
+    vertical-align: middle;
+    width: calc(100% / 2 - 4px);
+    margin-bottom: 5px;
     padding: 0;
+    padding-bottom: 15%;
+  }
+  .teach_focal_point h4{
+    background-color: var(--colorAu_5);
+    padding: 10px;
   }
   .list-inline-item {
     display: inline-block;
