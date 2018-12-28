@@ -1993,14 +1993,15 @@ a:hover {
 }
 .teach_focal_point {
   display: inline-block;
+  vertical-align: middle;
   background-color: #fff;
   height: 0;
   border: 10px solid var(--colorAu_5);
-  vertical-align: middle;
-  width: calc(100% / 2 - 4px);
+  /* width: calc(100% / 2 - 4px); */
   margin-bottom: 5px;
   padding: 0;
-  padding-bottom: 15%;
+  padding-bottom: 40%;
+  /* min-height: 500px; */
 }
 .teach_focal_point h4{
   background-color: var(--colorAu_5);
@@ -2033,8 +2034,15 @@ a:hover {
 .teach_focal_point p{
   font-size: 20px;
   padding:0 0 10px;
+  vertical-align: middle;
+  display: inline-block;
 } 
-
+.teach_focal_point p::after{
+  content: '';
+  height: 100%;
+  vertical-align: middle;
+  display: inline-block;
+} 
 /************************************************************************************/
 /*min-width  567*/
 @media screen and (min-width: 567px) {
@@ -3034,7 +3042,8 @@ a:hover {
     width: calc(100% / 2 - 4px);
     margin-bottom: 5px;
     padding: 0;
-    padding-bottom: 15%;
+    padding-bottom: 30%;
+    
   }
   .teach_focal_point h4{
     background-color: var(--colorAu_5);
@@ -3097,5 +3106,7 @@ a:hover {
     display: block;
     width: 20%;
   }
-
+  .teach_focal_point {
+    padding-bottom: 20%;
+  }
 }
